@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run serve --project=docs"
+    "start": "nx run serve --project=docs --no-hmr"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^19.2.1",
     "@angular/common": "~19.2.0",
     "@angular/compiler": "~19.2.0",
     "@angular/core": "~19.2.0",
