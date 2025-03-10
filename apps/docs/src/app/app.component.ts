@@ -1,27 +1,18 @@
-import { query, stagger, transition, trigger } from '@angular/animations';
 import { Component, computed, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { anFlash } from '@ngverse/animate';
+import { anFlash, anFlashOnEnter } from '@ngverse/animate';
 
 @Component({
   imports: [RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  animations: [
-    trigger('filterAnimation', [
-      transition(':increment', [
-        query(':enter', [stagger(50, [anFlash()])], {
-          optional: true,
-        }),
-      ]),
-    ]),
-  ],
+  animations: [anFlashOnEnter({}), anFlash({})],
 })
 export class AppComponent {
   title = 'docs';
   isOpen = signal(false);
-  counter = signal(0);
+  counter = signal(10);
 
   items = computed(() =>
     new Array(this.counter()).fill(0).map((_, index) => index)

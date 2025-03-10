@@ -9,12 +9,22 @@
   <button (click)="toggle()">Click</button>
   <button (click)="incr()">Incr</button>
 
-  <div [@filterAnimation]="counter()">
+  @if(isOpen()){
+  <div @flashOnLeave>
+    <h1>HELLO</h1>
+    @for (item of items(); track $index) {
+    <p @bounceOnLeave>{{ item }}</p>
+    }
+  </div>
+
+  }
+
+  <!-- <div [@filterAnimation]="counter()">
     @for (item of items(); track $index) {
 
     <p>{{ item }}</p>
     }
-  </div>
+  </div> -->
 
   <!-- {{ counter() }}
   <img
