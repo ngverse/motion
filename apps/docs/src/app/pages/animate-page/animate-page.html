@@ -1,0 +1,19 @@
+<div class="container mx-auto">
+  @if(animationItem();as animationItem){
+
+  <button (click)="play()">Play</button>
+  <!-- <div #playable class="rounded-full bg-pink-700 h-[250px] w-[250px]"></div> -->
+
+  <div>
+    <div>
+      <h1>{{import("anFlashOnEnter")}}</h1>
+      <h2>trigger name: anFlashOnEnter</h2>
+    </div>
+    <div>
+      <h3>Classes</h3>
+      <app-trigger-animate-options></app-trigger-animate-options>
+      <app-animate-options></app-animate-options>
+    </div>
+  </div>
+  }
+</div>

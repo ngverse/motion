@@ -2,5 +2,5 @@
 @import "tailwindcss";
 
 @theme{
-  --color-primary:var(--color-green-600)
+  --color-primary:var(--color-pink-600)
 }
