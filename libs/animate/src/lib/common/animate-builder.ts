@@ -4,12 +4,14 @@ import {
   animateChild,
   animation,
   AnimationKeyframesSequenceMetadata,
+  AnimationMetadata,
   AnimationOptions,
   AnimationReferenceMetadata,
+  AnimationStyleMetadata,
   query,
   transition,
   trigger,
-  useAnimation,
+  useAnimation
 } from '@angular/animations';
 import {
   AnimateDefaultOptions,
@@ -84,7 +86,7 @@ function getOptionValue<T>(
   return value as T;
 }
 
-export function createAnimate<T extends AnimateOptions>(
+export function createMotion<T extends AnimateOptions>(
   animation: AnimationReferenceMetadata,
   defaults: AnimateOptions
 ) {
@@ -103,12 +105,21 @@ export function createAnimate<T extends AnimateOptions>(
   };
 }
 
-export function createKFAnimate<T extends AnimateOptions>(
-  keyframes: AnimationKeyframesSequenceMetadata,
+export function buildMotion<T extends AnimateOptions>(
+  before: AnimationMetadata[],
+  after: AnimationKeyframesSequenceMetadata | AnimationStyleMetadata,
+  defaults: AnimateOptions
+) {
+  const _animate = animation([...before, animate('{{ time }}', after)]);
+  return createMotion<T>(_animate, defaults);
+}
+
+export function createAnimateMotion<T extends AnimateOptions>(
+  keyframes: AnimationKeyframesSequenceMetadata | AnimationStyleMetadata,
   defaults: AnimateOptions
 ) {
   const _animate = animation([animate('{{ time }}', keyframes)]);
-  return createAnimate<T>(_animate, defaults);
+  return createMotion<T>(_animate, defaults);
 }
 
 export function createTrigger<T extends TriggerAnimateOptions>(

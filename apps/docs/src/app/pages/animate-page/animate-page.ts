@@ -8,21 +8,40 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { AnimateOptionsComponent } from "../../core/animate-options";
+import {
+  anCollapseOnLeave,
+  anFlashOnEnter,
+  nxExpandOnEnter,
+} from '@ngverse/animate';
+import { AnimateOptionsComponent } from '../../core/animate-options';
 import { TriggerAnimateOptionsComponent } from '../../core/trigger-animate-options';
 import { ANIMATE_DATA, AnimateItem } from '../animate-data';
 
 @Component({
   selector: 'app-animate-page',
-  imports: [CommonModule, TriggerAnimateOptionsComponent, AnimateOptionsComponent],
+  imports: [
+    CommonModule,
+    TriggerAnimateOptionsComponent,
+    AnimateOptionsComponent,
+  ],
   templateUrl: './animate-page.html',
   styleUrl: './animate-page.css',
+  animations: [
+    anFlashOnEnter(),
+    nxExpandOnEnter({
+      time: '250ms',
+    }),
+    anCollapseOnLeave({
+      time: '250ms',
+    }),
+  ],
 })
 export class AnimatePageComponent {
   animationItem = signal<AnimateItem | undefined>(undefined);
   private animationBuilder = inject(AnimationBuilder);
   private animationPlaher: AnimationPlayer | undefined;
   playable = viewChild<ElementRef<HTMLElement>>('playable');
+  isOpen = signal(false);
 
   import(name: string) {
     return `import { ${name} } from "@ngverse/animate"`;
@@ -41,6 +60,10 @@ export class AnimatePageComponent {
         );
       }
     });
+  }
+
+  toggle() {
+    this.isOpen.set(!this.isOpen());
   }
 
   play() {
