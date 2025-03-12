@@ -7,7 +7,11 @@
     "generate": "npx nx generate @schematics/angular:component",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:motion": "npx nx run motion:build",
+    "build:docs": "npx nx run docs:build",
+    "check:docs": "npm run build:docs && npx nx run docs:lint  && npm run format:check",
+    "check:motion": "npm run build:motion && npx nx run motion:lint  && npm run format:check"
   },
   "private": true,
   "lint-staged": {
