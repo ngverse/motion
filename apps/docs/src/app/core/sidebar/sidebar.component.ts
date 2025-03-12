@@ -28,7 +28,7 @@ export const SIDEBAR_ROUTES = [
   },
   {
     name: 'Animate CSS',
-    children: [animateCSSLink('flash')].sort((a, b) =>
+    children: [animateCSSLink('flash'), animateCSSLink('bounce')].sort((a, b) =>
       a.name.localeCompare(b.name)
     ),
   },
