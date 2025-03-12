@@ -1,7 +1,12 @@
 <div class="flex flex-col items-center">
-  <h1 class="text-7xl font-medium text-primary  mt-10">
+  <h1 class="text-7xl font-medium text-primary mt-10">
     <app-project-name></app-project-name>
   </h1>
   <h2 class="text-center text-4xl my-6">Need Motion?, We Got You!</h2>
-  <img src="logo.png" class="w-[250px]" alt="logo" />
+  <img @twisterInDownOnEnter src="logo.png" class="w-[250px]" alt="logo" />
+  <a [routerLink]="'/doc/animatecss/flash'">
+    <button class="h-20 border border-primary mt-10 text-primary cursor-pointer hover:bg-pink-100 font-bold text-xl w-80 rounded-md">
+      Get Started
+    </button>
+  </a>
 </div>
