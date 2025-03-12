@@ -16,7 +16,7 @@ export default [
           enforceBuildableLibDependency: true,
           allow: [
             '^.*/eslint(\\.base)?\\.config\\.[cm]?js$',
-            '@ngverse/animate/core',
+            '@ngverse/motion/core',
           ],
           depConstraints: [
             {

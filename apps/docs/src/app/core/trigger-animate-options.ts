@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { ApiTableComponent } from './api-table/api-table.component';
 
 @Component({
-  selector: 'app-trigger-animate-options',
+  selector: 'app-trigger-motion-options',
   imports: [CommonModule, ApiTableComponent],
-  templateUrl: './trigger-animate-options.html',
-  styleUrl: './trigger-animate-options.css',
+  templateUrl: './trigger-motion-options.html',
+  styleUrl: './trigger-motion-options.css',
 })
-export class TriggerAnimateOptionsComponent {
+export class TriggerMotionOptionsComponent {
   api = [
     {
       name: 'delay',

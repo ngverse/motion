@@ -4,8 +4,8 @@ export const appRoutes: Route[] = [
   {
     path: 'doc',
     loadComponent: () =>
-      import('./pages/animate-page/animate-page').then(
-        (m) => m.AnimatePageComponent
+      import('./pages/motion-page/motion-page').then(
+        (m) => m.MotionPageComponent
       ),
   },
   {

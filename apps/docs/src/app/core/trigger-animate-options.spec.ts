@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TriggerAnimateOptionsComponent } from './trigger-animate-options';
+import { TriggerMotionOptionsComponent } from './trigger-motion-options';
 
-describe('TriggerAnimateOptionsComponent', () => {
-  let component: TriggerAnimateOptionsComponent;
-  let fixture: ComponentFixture<TriggerAnimateOptionsComponent>;
+describe('TriggerMotionOptionsComponent', () => {
+  let component: TriggerMotionOptionsComponent;
+  let fixture: ComponentFixture<TriggerMotionOptionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TriggerAnimateOptionsComponent],
+      imports: [TriggerMotionOptionsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TriggerAnimateOptionsComponent);
+    fixture = TestBed.createComponent(TriggerMotionOptionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MotionOptionsComponent } from './motion-options';
+import { MotionPageComponent } from './motion-page';
 
-describe('MotionOptionsComponent', () => {
-  let component: MotionOptionsComponent;
-  let fixture: ComponentFixture<MotionOptionsComponent>;
+describe('MotionPageComponent', () => {
+  let component: MotionPageComponent;
+  let fixture: ComponentFixture<MotionPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MotionOptionsComponent],
+      imports: [MotionPageComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MotionOptionsComponent);
+    fixture = TestBed.createComponent(MotionPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

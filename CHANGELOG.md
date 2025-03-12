@@ -2,10 +2,10 @@
 
 ### 🚀 Features
 
-- add animation-builder ([21b9557](https://github.com/ngverse/animate/commit/21b9557))
-- create animation ([1122f9f](https://github.com/ngverse/animate/commit/1122f9f))
-- add animations ([94e7a15](https://github.com/ngverse/animate/commit/94e7a15))
-- add collapse ([2467345](https://github.com/ngverse/animate/commit/2467345))
+- add animation-builder ([21b9557](https://github.com/ngverse/motion/commit/21b9557))
+- create animation ([1122f9f](https://github.com/ngverse/motion/commit/1122f9f))
+- add animations ([94e7a15](https://github.com/ngverse/motion/commit/94e7a15))
+- add collapse ([2467345](https://github.com/ngverse/motion/commit/2467345))
 
 ### ❤️ Thank You
 

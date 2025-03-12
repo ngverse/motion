@@ -1,6 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { anFlash, anFlashOnEnter } from '@ngverse/animate';
+import { anFlash, anFlashOnEnter } from '@ngverse/motion';
 
 @Component({
   imports: [RouterModule],

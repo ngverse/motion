@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { ApiTableComponent } from './api-table/api-table.component';
 
 @Component({
-  selector: 'app-animate-options',
+  selector: 'app-motion-options',
   imports: [CommonModule, ApiTableComponent],
-  templateUrl: './animate-options.html',
-  styleUrl: './animate-options.css',
+  templateUrl: './motion-options.html',
+  styleUrl: './motion-options.css',
 })
-export class AnimateOptionsComponent {
+export class MotionOptionsComponent {
   api = [
     {
       name: 'delay',
