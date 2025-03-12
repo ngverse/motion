@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { ProjectNameComponent } from "../../core/project-name/project-name.component";
 
 @Component({
   selector: 'app-home-page',
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectNameComponent],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })

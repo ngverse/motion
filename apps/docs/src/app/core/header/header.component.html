@@ -1,0 +1,29 @@
+<header
+  class="header sticky top-0 z-50 flex items-center justify-between px-5 bg-white border-b border-slate-300"
+>
+  <button class="lg:hidden" aria-label="toggle menu" (click)="showSidebar()">
+    <ng-icon [svg]="MENU_ICON" size="24"></ng-icon>
+  </button>
+  <div class="text-primary">
+    <a [routerLink]="['/']" class="ml-2 inline-flex items-center gap-2 lg:ml-0">
+      <img src="logo.png" width="40" alt="logo" />
+      <!-- <app-icon name="logo" width="40" height="40"></app-icon> -->
+      <app-project-name class="text-xl font-bold"></app-project-name>
+    </a>
+  </div>
+
+  <a href="https://github.com/ngverse/ui" target="_blank" class="ml-auto">
+    <button
+      appButton
+      icon
+      color="secondary"
+      variant="outline"
+      size="sm"
+      variant="link"
+      aria-label="Star on Github"
+    >
+      <img src="github.png" alt="github logo" width="40" />
+    </button>
+  </a>
+  <div id="docsearch"></div>
+</header>
