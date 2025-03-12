@@ -12,11 +12,11 @@ import {
 } from '@angular/core';
 import { flashOnEnter } from '@ngverse/motion/animatecss';
 
+import { Platform } from '@angular/cdk/platform';
 import { NgIcon } from '@ng-icons/core';
 import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
 import { SourceCodeComponent } from '../../core/source-code/source-code.component';
 import { ANIMATE_DATA, MotionItem, TRIGGER_TYPES } from '../motion-data';
-
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -36,6 +36,8 @@ export class MotionPageComponent {
   isOpen = signal(false);
   REPLAY_ICON = matReplay;
   EXTERNAL_LINK = matOpenInNew;
+
+  platform = inject(Platform);
 
   triggers = computed(() => {
     const triggers = this.motion()?.triggers;
@@ -105,6 +107,11 @@ export class MotionPageComponent {
         this.animationPlaher = animationFactory?.create(
           this.playable()?.nativeElement
         );
+        if (this.platform.isBrowser) {
+          setTimeout(() => {
+            this.play();
+          }, 300);
+        }
       }
     }
   }
