@@ -8,9 +8,8 @@ describe('SourceCodeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SourceCodeComponent]
-    })
-    .compileComponents();
+      imports: [SourceCodeComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SourceCodeComponent);
     component = fixture.componentInstance;

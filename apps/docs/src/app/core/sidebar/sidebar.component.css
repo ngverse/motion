@@ -1,7 +1,5 @@
 @reference "tailwindcss";
 
-
-
 .selected {
   @apply bg-slate-100 font-medium;
 }
@@ -20,4 +18,3 @@
 .in-progress {
   @apply pointer-events-none text-gray-400;
 }
-

@@ -8,5 +8,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './trigger-item.css',
 })
 export class TriggerItemComponent {
-  item=input.required<TriggerItem
+  item = input.required < TriggerItem;
 }

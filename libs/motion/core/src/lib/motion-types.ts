@@ -1,6 +1,4 @@
-import {
-  AnimationReferenceMetadata
-} from '@angular/animations';
+import { AnimationReferenceMetadata } from '@angular/animations';
 
 export type CHILDREN_ANIMATION_TYPE = 'before' | 'after' | 'none';
 

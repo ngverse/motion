@@ -10,7 +10,7 @@
 }
 
 .head {
-  @apply bg-gray-50 text-xs text-slate-700 uppercase dark:bg-slate-700 dark:text-slate-200;
+  @apply bg-gray-50 text-xs uppercase text-slate-700 dark:bg-slate-700 dark:text-slate-200;
 }
 
 .card {
