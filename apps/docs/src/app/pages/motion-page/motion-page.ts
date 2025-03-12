@@ -1,5 +1,5 @@
 import { AnimationBuilder, AnimationPlayer } from '@angular/animations';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import {
   Component,
   computed,
@@ -36,6 +36,7 @@ export class MotionPageComponent {
   isOpen = signal(false);
   REPLAY_ICON = matReplay;
   EXTERNAL_LINK = matOpenInNew;
+  private _document = inject(DOCUMENT);
 
   platform = inject(Platform);
 
@@ -111,6 +112,10 @@ export class MotionPageComponent {
           setTimeout(() => {
             this.play();
           }, 300);
+
+          this._document.defaultView?.scrollTo({
+            top: 0,
+          });
         }
       }
     }

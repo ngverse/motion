@@ -1,5 +1,5 @@
 import { AnimationReferenceMetadata } from '@angular/animations';
-import { bounce, flash } from '@ngverse/motion/animatecss';
+import { bounce, flash, pulse } from '@ngverse/motion/animatecss';
 
 interface MotionVariant {
   name: string;
@@ -44,6 +44,12 @@ export const ANIMATE_DATA: MotionData = [
         name: 'bounce',
         triggers: [TRIGGER_TYPES.All],
         motion: bounce,
+      },
+      {
+        href: 'https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/pulse.css',
+        name: 'pulse',
+        triggers: [TRIGGER_TYPES.All],
+        motion: pulse,
       },
     ],
   },
