@@ -1,36 +1,47 @@
-<div class="container mx-auto">
-  @if(animationItem();as animationItem){
-
-  <button (click)="play()">Play</button>
-  <!-- <div #playable class="rounded-full bg-pink-700 h-[250px] w-[250px]"></div> -->
-  @if(isOpen()){
-  <!-- <h1 @nxExpandOnEnter @nxCollapseOnLeave class="overflow-x-hidden truncate">
-    <div>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially
-      unchanged. It was popularised in the 1960s with the release of Letraset
-      sheets containing Lorem Ipsum passages, and more recently with desktop
-      publishing software like Aldus PageMaker including versions of Lorem
-      Ipsum.
-    </div>
-  </h1> -->
-  <input @flashOnEnter class="border border-red-400" />
-
+<div class="container mx-auto w-[1204px]">
+  @if(motion();as motion){
+  <h1 class="text-7xl">{{motion.name}}</h1>
+  @if(motion.href){
+  <a target="_blank" class="bg-slate-300 px-2 rounded-xl my-2 inline-flex items-center gap-1" [href]="motion.href">Reference <ng-icon [svg]="EXTERNAL_LINK"></ng-icon> </a>
   }
-  <button (click)="toggle()">Click</button>
-  <div>
-    <div>
-      <h1>{{import("anFlashOnEnter")}}</h1>
-      <h2>trigger name: anFlashOnEnter</h2>
-    </div>
-    <div>
-      <h3>Classes</h3>
-      <!-- <app-trigger-motion-options></app-trigger-motion-options> -->
-      <!-- <app-motion-options></app-motion-options> -->
+  <div
+    class="rounded-md border border-slate-300 p-4 w-full my-6 flex flex-col justify-center items-center gap-4"
+  >
+    <button
+      title="Replay animation"
+      class="rounded-full bg-primary hover:bg-pink-500 cursor-pointer text-on-primary h-10 w-10 flex items-center justify-center"
+      aria-label="Replay animation"
+      (click)="play()"
+    >
+      <ng-icon size="24" [svg]="REPLAY_ICON"></ng-icon>
+    </button>
+    <div
+      #playable
+      class="rounded-full border-primary border h-[250px] w-[250px] flex items-center justify-center flex-col"
+    >
+      <span class="text-7xl mb-2">😊 </span>
     </div>
   </div>
-  }
+  <app-source-code label="Import" [code]="importCode()"></app-source-code>
+  @if(triggers();as triggers){
+
+  <h2 class="text-3xl mt-8 pb-2 border-b border-b-slate-300">Triggers</h2>
+  @for (trigger of triggers; track $index) {
+  <div class="my-6">
+    <p class="text-xl mb-2">
+      {{triggerImportName(trigger)}}
+      <span
+        class="rounded-xl px-3 text-slate-700 border-slate-400 text-base border"
+      >
+        {{triggerAnimateType(trigger)}}</span
+      >
+      <span
+        class="rounded-xl px-3 text-slate-700 border-slate-400 text-base border ml-1"
+      >
+        {{triggerUsageName(trigger)}}</span
+      >
+    </p>
+    <app-source-code [code]="triggerImportCode(trigger)"></app-source-code>
+  </div>
+  } } }
 </div>

@@ -1,40 +1,43 @@
 import { AnimationReferenceMetadata } from '@angular/animations';
-import { flash } from "@ngverse/motion/animatecss";
+import { flash } from '@ngverse/motion/animatecss';
 
 interface MotionVariant {
   name: string;
   triggerName: string;
 }
 
-enum TRIGGER_TYPES {
-  Enter = 1,
-  Leave = 2,
-  Incr = 3,
-  Decr = 4,
-  All = 5,
+export enum TRIGGER_TYPES {
+  Enter = 'enter',
+  Leave = 'leave',
+  Incr = 'incr',
+  Decr = 'decr',
+  All = 'all',
 }
 
 export interface MotionItem {
   name: string;
   triggers: TRIGGER_TYPES[];
-  animation: () => AnimationReferenceMetadata;
+  alias?: string;
+  href?: string;
+  motion: () => AnimationReferenceMetadata;
 }
 
 export interface MotionGroup {
   name: string;
-  animations: MotionItem[];
+  motions: MotionItem[];
 }
 
 export type MotionData = Array<MotionGroup>;
 
 export const ANIMATE_DATA: MotionData = [
   {
-    name: 'motion-css',
-    animations: [
+    name: 'animatecss',
+    motions: [
       {
+        href: 'https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/flash.css',
         name: 'flash',
         triggers: [TRIGGER_TYPES.All],
-        animation: flash,
+        motion: flash,
       },
     ],
   },

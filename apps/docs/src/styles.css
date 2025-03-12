@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'highlight.js/styles/github.css';
 
-@theme{
-  --color-primary:var(--color-pink-600)
+@theme {
+  --color-primary: var(--color-pink-600);
+  --color-on-primary: var(--color-white);
+}
+
+:root {
+  font-family: 'Open Sans', sans-serif;
 }
