@@ -5,8 +5,6 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@angular/common": ">=19.2.0",
-    "@angular/core": ">=19.2.0",
     "@angular/animations": ">=19.2.0"
   },
   "sideEffects": false
