@@ -1,0 +1,52 @@
+<div class="container mx-auto w-[1204px]">
+  @if(motion();as motion){
+  <h1 class="text-7xl">{{motion.name}}</h1>
+  @if(motion.href){
+  <a
+    target="_blank"
+    class="my-2 inline-flex items-center gap-1 rounded-xl bg-slate-300 px-2"
+    [href]="motion.href"
+    >Reference <ng-icon [svg]="EXTERNAL_LINK"></ng-icon>
+  </a>
+  }
+  <div
+    class="my-6 flex w-full flex-col items-center justify-center gap-4 rounded-md border border-slate-300 p-4"
+  >
+    <button
+      title="Replay animation"
+      class="bg-primary text-on-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-pink-500"
+      aria-label="Replay animation"
+      (click)="play()"
+    >
+      <ng-icon size="24" [svg]="REPLAY_ICON"></ng-icon>
+    </button>
+    <div
+      #playable
+      class="border-primary flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full border"
+    >
+      <span class="mb-2 text-7xl">😊 </span>
+    </div>
+  </div>
+  <app-source-code label="Import" [code]="importCode()"></app-source-code>
+  @if(triggers();as triggers){
+
+  <h2 class="mt-8 border-b border-b-slate-300 pb-2 text-3xl">Triggers</h2>
+  @for (trigger of triggers; track $index) {
+  <div class="my-6">
+    <p class="mb-2 text-xl">
+      {{triggerImportName(trigger)}}
+      <span
+        class="rounded-xl border border-slate-400 px-3 text-base text-slate-700"
+      >
+        {{triggerAnimateType(trigger)}}</span
+      >
+      <span
+        class="ml-1 rounded-xl border border-slate-400 px-3 text-base text-slate-700"
+      >
+        {{triggerUsageName(trigger)}}</span
+      >
+    </p>
+    <app-source-code [code]="triggerImportCode(trigger)"></app-source-code>
+  </div>
+  } } }
+</div>
