@@ -1,5 +1,5 @@
 import { AnimationReferenceMetadata } from '@angular/animations';
-import { anFlash } from '@ngverse/motion';
+import { flash } from "@ngverse/motion/animatecss";
 
 interface MotionVariant {
   name: string;
@@ -34,7 +34,7 @@ export const ANIMATE_DATA: MotionData = [
       {
         name: 'flash',
         triggers: [TRIGGER_TYPES.All],
-        animation: anFlash,
+        animation: flash,
       },
     ],
   },

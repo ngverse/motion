@@ -8,22 +8,16 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { anCollapseOnLeave, nxExpandOnEnter } from '@ngverse/motion';
-import { ANIMATE_DATA, MotionItem } from "../motion-data";
+import { flashOnEnter } from '@ngverse/motion/animatecss';
+
+import { ANIMATE_DATA, MotionItem } from '../motion-data';
 
 @Component({
   selector: 'app-motion-page',
   imports: [CommonModule],
   templateUrl: './motion-page.html',
   styleUrl: './motion-page.css',
-  animations: [
-    nxExpandOnEnter({
-      time: '250ms',
-    }),
-    anCollapseOnLeave({
-      time: '250ms',
-    }),
-  ],
+  animations: [flashOnEnter()],
 })
 export class MotionPageComponent {
   animationItem = signal<MotionItem | undefined>(undefined);

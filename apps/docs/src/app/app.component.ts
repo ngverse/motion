@@ -1,13 +1,11 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { anFlash, anFlashOnEnter } from '@ngverse/motion';
 
 @Component({
   imports: [RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  animations: [anFlashOnEnter({}), anFlash({})],
 })
 export class AppComponent {
   title = 'docs';

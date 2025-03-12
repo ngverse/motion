@@ -1,12 +1,13 @@
 import {
-  AnimationOptions,
-  AnimationReferenceMetadata,
+  AnimationReferenceMetadata
 } from '@angular/animations';
 
 export type CHILDREN_ANIMATION_TYPE = 'before' | 'after' | 'none';
 
-export interface MotionOptions extends AnimationOptions {
-  time?: string;
+export interface MotionOptions {
+  duration?: number;
+  delay?: number;
+  easing?: string;
 }
 
 export type CreateMotionFactory<T extends MotionOptions> = (

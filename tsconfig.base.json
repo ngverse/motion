@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ngverse/motion": ["libs/motion/src/index.ts"],
-      "@ngverse/motion/motioncss": ["libs/motion/motioncss/src/index.ts"],
+      "@ngverse/motion/animatecss": ["libs/motion/animatecss/src/index.ts"],
       "@ngverse/motion/core": ["libs/motion/core/src/index.ts"]
     }
   },
