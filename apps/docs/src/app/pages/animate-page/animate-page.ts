@@ -10,9 +10,9 @@ import {
 } from '@angular/core';
 import {
   anCollapseOnLeave,
-  anFlashOnEnter,
-  nxExpandOnEnter,
+  nxExpandOnEnter
 } from '@ngverse/animate';
+import { shakeOnEnter } from '@ngverse/animate/animatecss';
 import { AnimateOptionsComponent } from '../../core/animate-options';
 import { TriggerAnimateOptionsComponent } from '../../core/trigger-animate-options';
 import { ANIMATE_DATA, AnimateItem } from '../animate-data';
@@ -27,7 +27,7 @@ import { ANIMATE_DATA, AnimateItem } from '../animate-data';
   templateUrl: './animate-page.html',
   styleUrl: './animate-page.css',
   animations: [
-    anFlashOnEnter(),
+    shakeOnEnter(),
     nxExpandOnEnter({
       time: '250ms',
     }),

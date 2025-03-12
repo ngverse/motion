@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngverse/animate": ["libs/animate/src/index.ts"]
+      "@ngverse/animate": ["libs/animate/src/index.ts"],
+      "@ngverse/animate/animatecss": ["libs/animate/animatecss/src/index.ts"],
+      "@ngverse/animate/core": ["libs/animate/core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
