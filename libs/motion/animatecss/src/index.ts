@@ -1,1 +1,2 @@
-export * from './lib/attention-seekers/flash';
+export * from './lib/bounce';
+export * from './lib/flash';

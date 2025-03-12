@@ -1,5 +1,5 @@
 /**
- * ref: https://github.com/motion-css/motion.css/blob/main/source/attention_seekers/flash.css
+ * ref: https://github.com/animate-css/animate.css/blob/main/source/attention_seekers/flash.css
  */
 import { keyframes, style } from '@angular/animations';
 import {
@@ -10,7 +10,7 @@ import {
   createOnIncr,
   createOnLeave,
 } from '@ngverse/motion/core';
-import { getAnimatecssDefaults } from '../common/animate-css-defaults';
+import { getAnimatecssDefaults } from './common/animate-css-defaults';
 
 const defaults = createDefaults();
 const name = `flash`;
