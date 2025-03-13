@@ -10,23 +10,22 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { flashOnEnter } from '@ngverse/motion/animatecss';
 
 import { Platform } from '@angular/cdk/platform';
 import { NgIcon } from '@ng-icons/core';
 import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
+import { ApiTableComponent } from '../../core/api-table/api-table.component';
 import { SourceCodeComponent } from '../../core/source-code/source-code.component';
-import { ANIMATE_DATA, MotionItem, TRIGGER_TYPES } from '../motion-data';
+import { ANIMATE_DATA, MotionItem, TRIGGER_TYPES } from '../../motion-data';
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 @Component({
   selector: 'app-motion-page',
-  imports: [CommonModule, SourceCodeComponent, NgIcon],
+  imports: [CommonModule, SourceCodeComponent, NgIcon, ApiTableComponent],
   templateUrl: './motion-page.html',
   styleUrl: './motion-page.css',
-  animations: [flashOnEnter()],
 })
 export class MotionPageComponent {
   motion = signal<MotionItem | undefined>(undefined);
@@ -54,6 +53,12 @@ export class MotionPageComponent {
         TRIGGER_TYPES.Incr,
         TRIGGER_TYPES.Decr,
       ];
+    }
+    if (firstTrigger === TRIGGER_TYPES.AllExceptEnter) {
+      return [TRIGGER_TYPES.Leave, TRIGGER_TYPES.Incr, TRIGGER_TYPES.Decr];
+    }
+    if (firstTrigger === TRIGGER_TYPES.AllExceptLeave) {
+      return [TRIGGER_TYPES.Enter, TRIGGER_TYPES.Incr, TRIGGER_TYPES.Decr];
     }
     return triggers;
   });

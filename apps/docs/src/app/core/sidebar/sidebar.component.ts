@@ -43,6 +43,12 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('pulse'),
         ].sort((a, b) => a.name.localeCompare(b.name)),
       },
+      {
+        name: 'Back Entrances',
+        children: [animateCSSLink('backInDown')].sort((a, b) =>
+          a.name.localeCompare(b.name)
+        ),
+      },
     ],
   },
 ] as SidebarRoot[];

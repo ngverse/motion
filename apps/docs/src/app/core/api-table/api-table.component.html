@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     @for (data of data(); track $index) {
-      <tr class="border-b">
+      <tr class="border-b border-slate-300">
         @for (
           key of headers();
           track $index;
@@ -20,7 +20,7 @@
           @if (isFirst) {
             <th
               scope="row"
-              class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+              class="whitespace-nowrap px-6 py-4 font-medium text-gray-900"
             >
               {{ value }}
               @if (hasRequired(data)) {
