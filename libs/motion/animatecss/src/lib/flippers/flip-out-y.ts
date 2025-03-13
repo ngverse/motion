@@ -6,7 +6,7 @@ import {
   createDefaults,
   createMotionFromAnimate,
   createOnDecr,
-  createOnEnter,
+  createOnLeave,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
@@ -42,10 +42,10 @@ export const flipOutY = createMotionFromAnimate(
 );
 
 /**
- * flipOutY animation on :enter
- * @remarks triggerName: `flipOutYOnEnter`
+ * flipOutY animation on :leave
+ * @remarks triggerName: `flipOutYOnLeave`
  */
-export const flipOutYOnEnter = createOnEnter(
+export const flipOutYOnLeave = createOnLeave(
   flipOutY,
   name,
   defaults,

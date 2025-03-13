@@ -8,7 +8,7 @@
     [href]="motion.href"
     >Reference <ng-icon [svg]="EXTERNAL_LINK"></ng-icon>
   </a>
-  }
+  } }
   <div
     class="my-6 flex w-full flex-col items-center justify-center gap-4 rounded-md border border-slate-300 p-4"
   >
@@ -21,13 +21,14 @@
       <ng-icon size="24" [svg]="REPLAY_ICON"></ng-icon>
     </button>
     <div
-      style="backface-visibility: visible !important"
       #playable
       class="border-primary flex h-[250px] w-[250px] flex-col items-center justify-center rounded-full border bg-pink-100"
     >
       <span class="mb-2 text-7xl">😊 </span>
     </div>
   </div>
+  @if(motion();as motion){
+
   <app-source-code label="Import" [code]="importCode()"></app-source-code>
   @if(motion.options){
   <app-api-table

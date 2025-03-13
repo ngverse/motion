@@ -1,17 +1,17 @@
 import { AnimationBuilder, AnimationPlayer } from '@angular/animations';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import {
+  AfterViewInit,
   Component,
   computed,
-  effect,
   ElementRef,
   inject,
-  input,
   signal,
   viewChild,
 } from '@angular/core';
 
 import { Platform } from '@angular/cdk/platform';
+import { ActivatedRoute } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
 import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
 import { ApiTableComponent } from '../../core/api-table/api-table.component';
@@ -27,7 +27,7 @@ function capitalize(str: string) {
   templateUrl: './motion-page.html',
   styleUrl: './motion-page.css',
 })
-export class MotionPageComponent {
+export class MotionPageComponent implements AfterViewInit {
   motion = signal<MotionItem | undefined>(undefined);
   private animationBuilder = inject(AnimationBuilder);
   private animationPlaher: AnimationPlayer | undefined;
@@ -36,6 +36,10 @@ export class MotionPageComponent {
   REPLAY_ICON = matReplay;
   EXTERNAL_LINK = matOpenInNew;
   private _document = inject(DOCUMENT);
+
+  private _activatedRoute = inject(ActivatedRoute);
+
+  libraryName = signal<string>('');
 
   platform = inject(Platform);
 
@@ -94,32 +98,30 @@ export class MotionPageComponent {
       } } from '@ngverse/motion/${this.libraryName()}' `
   );
 
-  libraryName = input.required<string>();
-  motionName = input.required<string>();
-
   import(name: string) {
     return `import { ${name} } from "@ngverse/motion"`;
   }
 
-  constructor() {
-    effect(() => {
-      this.fillMotion();
+  ngAfterViewInit(): void {
+    this._activatedRoute.paramMap.subscribe((params) => {
+      const libraryName = params.get('libraryName');
+      const motionName = params.get('motionName');
+      const playable = this.playable()?.nativeElement;
+      if (libraryName && motionName && playable) {
+        this.fillMotion(libraryName, motionName, playable);
+      }
     });
   }
 
-  fillMotion() {
-    const libraryName = this.libraryName();
-    const motionName = this.motionName();
+  fillMotion(libraryName: string, motionName: string, playable: HTMLElement) {
     const library = ANIMATE_DATA.find((a) => a.name === libraryName);
     if (library) {
       const motion = library.motions.find((m) => m.name === motionName);
       if (motion) {
         this.motion.set(motion);
         const animationFactory = this.animationBuilder.build(motion.motion());
-        this.animationPlaher?.destroy();
-        this.animationPlaher = animationFactory?.create(
-          this.playable()?.nativeElement
-        );
+        // this.animationPlaher?.destroy();
+        this.animationPlaher = animationFactory?.create(playable);
         try {
           this.animationPlaher?.onDone(() => {
             this.animationPlaher?.reset();

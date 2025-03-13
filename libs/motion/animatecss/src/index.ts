@@ -1,3 +1,6 @@
+/** Defaults */
+export { getAnimatecssDefaults } from './lib/common/animate-css-defaults';
+
 /** Attention seekers */
 export * from './lib/attention_seekers/bounce';
 export * from './lib/attention_seekers/flash';
