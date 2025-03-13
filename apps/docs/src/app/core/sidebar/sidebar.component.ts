@@ -62,6 +62,15 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('flipOutY'),
         ],
       },
+      {
+        name: 'Specials',
+        children: [
+          animateCSSLink('hinge'),
+          animateCSSLink('jackInTheBox'),
+          animateCSSLink('rollOut'),
+          animateCSSLink('rollIn'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];

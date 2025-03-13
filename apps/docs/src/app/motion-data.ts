@@ -11,7 +11,11 @@ import {
   flipInY,
   flipOutX,
   flipOutY,
+  hinge,
+  jackInTheBox,
   pulse,
+  rollIn,
+  rollOut,
 } from '@ngverse/motion/animatecss';
 
 export enum TRIGGER_TYPES {
@@ -160,6 +164,30 @@ export const ANIMATE_DATA: MotionData = [
         name: 'flipOutY',
         triggers: [TRIGGER_TYPES.AllLeaves],
         motion: flipOutY,
+      },
+      {
+        href: getAnimatecssLink('specials', 'hinge'),
+        name: 'hinge',
+        triggers: [TRIGGER_TYPES.All],
+        motion: hinge,
+      },
+      {
+        href: getAnimatecssLink('specials', 'jackInTheBox'),
+        name: 'jackInTheBox',
+        triggers: [TRIGGER_TYPES.All],
+        motion: jackInTheBox,
+      },
+      {
+        href: getAnimatecssLink('specials', 'rollIn'),
+        name: 'rollIn',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: rollIn,
+      },
+      {
+        href: getAnimatecssLink('specials', 'rollOut'),
+        name: 'rollOut',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: rollOut,
       },
     ],
   },
