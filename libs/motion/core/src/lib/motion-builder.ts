@@ -60,7 +60,7 @@ function getOptions<T extends MotionOptions>(
   } as Required<T>;
 }
 
-export function createMotion<T extends MotionOptions>(
+export function createMotion<T extends Partial<MotionOptions>>(
   animation: AnimationReferenceMetadata,
   defaults: MotionOptions,
   globalDefaults: MotionOptions
@@ -92,7 +92,7 @@ export function buildMotion<T extends MotionOptions>(
   return createMotion<T>(_motion, defaults, globalDefaults);
 }
 
-export function createMotionFromAnimate<T extends MotionOptions>(
+export function createMotionFromAnimate<T extends Partial<MotionOptions>>(
   keyframes: AnimationKeyframesSequenceMetadata | AnimationStyleMetadata,
   defaults: MotionOptions,
   globalDefaults: MotionOptions
@@ -101,7 +101,7 @@ export function createMotionFromAnimate<T extends MotionOptions>(
   return createMotion<T>(_motion, defaults, globalDefaults);
 }
 
-export function createTrigger<T extends TriggerMotionOptions>(
+export function createTrigger<T extends Partial<TriggerMotionOptions>>(
   motionFactory: CreateMotionFactory<any>,
   triggerName: string,
   transitionName: string,
@@ -123,7 +123,7 @@ export function createTrigger<T extends TriggerMotionOptions>(
   };
 }
 
-export function createOnEnter<T extends TriggerMotionOptions>(
+export function createOnEnter<T extends Partial<TriggerMotionOptions>>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
@@ -138,7 +138,7 @@ export function createOnEnter<T extends TriggerMotionOptions>(
   );
 }
 
-export function createOnLeave<T extends TriggerMotionOptions>(
+export function createOnLeave<T extends Partial<TriggerMotionOptions>>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
@@ -153,7 +153,7 @@ export function createOnLeave<T extends TriggerMotionOptions>(
   );
 }
 
-export function createOnIncr<T extends TriggerMotionOptions>(
+export function createOnIncr<T extends Partial<TriggerMotionOptions>>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
@@ -168,7 +168,7 @@ export function createOnIncr<T extends TriggerMotionOptions>(
   );
 }
 
-export function createOnDecr<T extends TriggerMotionOptions>(
+export function createOnDecr<T extends Partial<TriggerMotionOptions>>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,

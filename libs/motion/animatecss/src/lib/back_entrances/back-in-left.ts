@@ -28,7 +28,7 @@ const name = `backInLeft`;
 /**
  * backInLeft animation
  */
-export const backInLeft = createMotionFromAnimate(
+export const backInLeft = createMotionFromAnimate<backInLeftMotionOptions>(
   keyframes([
     style({
       transform: 'translateX({{startTranslateX}}) scale(0.7)',

@@ -26,7 +26,7 @@ const name = `expand`;
 /**
  * expand animation
  */
-export const expand = createMotionFromAnimate(
+export const expand = createMotionFromAnimate<expandMotionOptions>(
   keyframes([
     style({
       height: '{{startHeight}}',
