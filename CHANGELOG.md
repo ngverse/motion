@@ -1,3 +1,13 @@
+## 0.2.0 (2025-03-13)
+
+### 🚀 Features
+
+- add collapse-x,expand-x ([518eb13](https://github.com/ngverse/animate/commit/518eb13))
+
+### ❤️ Thank You
+
+- lukonik @lukonik
+
 ## 0.1.0 (2025-03-13)
 
 ### 🚀 Features
