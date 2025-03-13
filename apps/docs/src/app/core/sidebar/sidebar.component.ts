@@ -34,7 +34,12 @@ export const SIDEBAR_ROUTES = [
   },
   {
     name: 'General CSS',
-    children: [generalLink('expand'), generalLink('collapse')],
+    children: [
+      generalLink('expand'),
+      generalLink('expand-x'),
+      generalLink('collapse'),
+      generalLink('collapse-x'),
+    ],
   },
   {
     name: 'Animate CSS',

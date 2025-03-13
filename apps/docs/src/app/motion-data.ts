@@ -17,7 +17,12 @@ import {
   rollIn,
   rollOut,
 } from '@ngverse/motion/animatecss';
-import { collapse, expand } from '@ngverse/motion/generalcss';
+import {
+  collapse,
+  collapseX,
+  expand,
+  expandX,
+} from '@ngverse/motion/generalcss';
 
 export enum TRIGGER_TYPES {
   Enter = 'enter',
@@ -76,6 +81,19 @@ export const ANIMATE_DATA: MotionData = [
         ],
       },
       {
+        name: 'expand-x',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: expandX,
+        options: [
+          {
+            name: 'startWidth',
+            type: 'string',
+            default: '0px',
+            description: 'The starting width of the element',
+          },
+        ],
+      },
+      {
         name: 'collapse',
         triggers: [TRIGGER_TYPES.AllLeaves],
         motion: collapse,
@@ -85,6 +103,19 @@ export const ANIMATE_DATA: MotionData = [
             type: 'string',
             default: '0px',
             description: 'The ending height of the element',
+          },
+        ],
+      },
+      {
+        name: 'collapse-x',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: collapseX,
+        options: [
+          {
+            name: 'endWidth',
+            type: 'string',
+            default: '0px',
+            description: 'The ending width of the element',
           },
         ],
       },
