@@ -92,7 +92,7 @@ export function buildMotion<T extends MotionOptions>(
   return createMotion<T>(_motion, defaults, globalDefaults);
 }
 
-export function createMotionMotion<T extends MotionOptions>(
+export function createMotionFromAnimate<T extends MotionOptions>(
   keyframes: AnimationKeyframesSequenceMetadata | AnimationStyleMetadata,
   defaults: MotionOptions,
   globalDefaults: MotionOptions

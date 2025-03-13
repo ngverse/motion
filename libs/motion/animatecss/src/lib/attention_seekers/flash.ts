@@ -4,7 +4,7 @@
 import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
-  createMotionMotion,
+  createMotionFromAnimate,
   createOnDecr,
   createOnEnter,
   createOnIncr,
@@ -18,7 +18,7 @@ const name = `flash`;
 /**
  * flash animation
  */
-export const flash = createMotionMotion(
+export const flash = createMotionFromAnimate(
   keyframes([
     style({ opacity: 1, offset: 0 }),
     style({ opacity: 0, offset: 0.25 }),

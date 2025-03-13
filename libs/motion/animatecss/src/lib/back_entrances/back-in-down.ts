@@ -4,7 +4,7 @@
 import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
-  createMotionMotion,
+  createMotionFromAnimate,
   createOnEnter,
   createOnIncr,
   MotionOptions,
@@ -28,7 +28,7 @@ const name = `backInDown`;
 /**
  * backInDown animation
  */
-export const backInDown = createMotionMotion(
+export const backInDown = createMotionFromAnimate(
   keyframes([
     style({
       transform: 'translateY({{startTranslateY}}) scale(0.7)',

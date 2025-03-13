@@ -8,3 +8,7 @@ export * from './lib/back_entrances/back-in-down';
 export * from './lib/back_entrances/back-in-left';
 export * from './lib/back_entrances/back-in-right';
 export * from './lib/back_entrances/back-in-up';
+
+/** Flippers */
+export * from './lib/flippers/flip';
+export * from './lib/flippers/flip-in-x';

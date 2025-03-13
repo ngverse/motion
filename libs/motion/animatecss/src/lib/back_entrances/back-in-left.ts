@@ -4,7 +4,7 @@
 import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
-  createMotionMotion,
+  createMotionFromAnimate,
   createOnEnter,
   createOnIncr,
   MotionOptions,
@@ -28,7 +28,7 @@ const name = `backInLeft`;
 /**
  * backInLeft animation
  */
-export const backInLeft = createMotionMotion(
+export const backInLeft = createMotionFromAnimate(
   keyframes([
     style({
       transform: 'translateX({{startTranslateX}}) scale(0.7)',

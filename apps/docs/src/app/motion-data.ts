@@ -6,6 +6,8 @@ import {
   backInUp,
   bounce,
   flash,
+  flip,
+  flipInX,
   pulse,
 } from '@ngverse/motion/animatecss';
 
@@ -125,6 +127,18 @@ export const ANIMATE_DATA: MotionData = [
             description: 'The starting position of the element',
           },
         ],
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flip'),
+        name: 'flip',
+        triggers: [TRIGGER_TYPES.All],
+        motion: flip,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipInX'),
+        name: 'flipInX',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: flipInX,
       },
     ],
   },

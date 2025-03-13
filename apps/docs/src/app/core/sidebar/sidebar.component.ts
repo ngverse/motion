@@ -41,7 +41,7 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('flash'),
           animateCSSLink('bounce'),
           animateCSSLink('pulse'),
-        ].sort((a, b) => a.name.localeCompare(b.name)),
+        ],
       },
       {
         name: 'Back Entrances',
@@ -50,7 +50,11 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('backInLeft'),
           animateCSSLink('backInRight'),
           animateCSSLink('backInUp'),
-        ].sort((a, b) => a.name.localeCompare(b.name)),
+        ],
+      },
+      {
+        name: 'Flippers',
+        children: [animateCSSLink('flip'), animateCSSLink('flipInX')],
       },
     ],
   },

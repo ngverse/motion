@@ -4,7 +4,7 @@
 import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
-  createMotionMotion,
+  createMotionFromAnimate,
   createOnDecr,
   createOnEnter,
   createOnIncr,
@@ -18,7 +18,7 @@ const name = `twisterInDown`;
 /**
  * twisterInDown animation
  */
-export const twisterInDown = createMotionMotion(
+export const twisterInDown = createMotionFromAnimate(
   keyframes([
     style({
       opacity: 0,
