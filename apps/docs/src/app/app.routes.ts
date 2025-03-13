@@ -14,6 +14,7 @@ export const appRoutes: Route[] = [
           import('./pages/motion-page/motion-page').then(
             (m) => m.MotionPageComponent
           ),
+        runGuardsAndResolvers: 'always',
       },
       {
         path: '',

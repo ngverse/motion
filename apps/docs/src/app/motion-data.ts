@@ -17,6 +17,7 @@ import {
   rollIn,
   rollOut,
 } from '@ngverse/motion/animatecss';
+import { expand } from '@ngverse/motion/general';
 
 export enum TRIGGER_TYPES {
   Enter = 'enter',
@@ -59,6 +60,16 @@ function getAnimatecssLink(group: string, name: string) {
 
 export const ANIMATE_DATA: MotionData = [
   {
+    name: 'general',
+    motions: [
+      {
+        name: 'expand',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: expand,
+      },
+    ],
+  },
+  {
     name: 'animatecss',
     motions: [
       {
@@ -66,6 +77,14 @@ export const ANIMATE_DATA: MotionData = [
         name: 'flash',
         triggers: [TRIGGER_TYPES.All],
         motion: flash,
+        options: [
+          {
+            name: 'startHeight',
+            type: 'string',
+            default: '0px',
+            description: 'The starting height of the element',
+          },
+        ],
       },
       {
         href: getAnimatecssLink('attention_seekers', 'bounce'),

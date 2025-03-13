@@ -33,6 +33,10 @@ export const SIDEBAR_ROUTES = [
     ],
   },
   {
+    name: 'General',
+    children: [generalLink('expand')],
+  },
+  {
     name: 'Animate CSS',
     groups: [
       {
@@ -79,6 +83,13 @@ function animateCSSLink(name: string) {
   return {
     name: name,
     url: `/doc/animatecss/${name}`,
+  };
+}
+
+function generalLink(name: string) {
+  return {
+    name: name,
+    url: `/doc/general/${name}`,
   };
 }
 
