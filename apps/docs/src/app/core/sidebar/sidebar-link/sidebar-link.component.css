@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.selected {
+  @apply bg-slate-100 font-medium;
+}

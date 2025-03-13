@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { SidebarLinkComponent } from './sidebar-link/sidebar-link.component';
 
-interface Group {
+interface SidebarRoot {
+  name: string;
+  groups: SidebarGroup[];
+  children?: SidebarLink[];
+}
+
+interface SidebarGroup {
   name: string;
   children: SidebarLink[];
 }
@@ -28,13 +34,18 @@ export const SIDEBAR_ROUTES = [
   },
   {
     name: 'Animate CSS',
-    children: [
-      animateCSSLink('flash'),
-      animateCSSLink('bounce'),
-      animateCSSLink('pulse'),
-    ].sort((a, b) => a.name.localeCompare(b.name)),
+    groups: [
+      {
+        name: 'Attention Seekers',
+        children: [
+          animateCSSLink('flash'),
+          animateCSSLink('bounce'),
+          animateCSSLink('pulse'),
+        ].sort((a, b) => a.name.localeCompare(b.name)),
+      },
+    ],
   },
-] as Group[];
+] as SidebarRoot[];
 
 function animateCSSLink(name: string) {
   return {
@@ -49,10 +60,10 @@ export function getAllSidebarLinks() {
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [SidebarLinkComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-  routes: Group[] = SIDEBAR_ROUTES;
+  routes: SidebarRoot[] = SIDEBAR_ROUTES;
 }

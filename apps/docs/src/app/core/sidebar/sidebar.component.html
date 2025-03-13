@@ -3,22 +3,26 @@
     @for (route of routes; track $index) {
       <ul class="list-none pl-0">
         <li class="mb-3 font-medium">{{ route.name }}</li>
-        @for (link of route.children; track $index) {
-          <li>
-            <a
-              [routerLinkActive]="'selected'"
-              class="sidebar-link my-3 ml-0 flex h-8 cursor-pointer items-center justify-between rounded-md pl-4 pr-2 hover:bg-slate-100 hover:font-medium"
-              [routerLink]="link.url"
-              >{{ link.name }}
-              @if (link.mode === 'experimental') {
-                <span
-                  class="inline-flex items-center gap-1 rounded-xl bg-slate-200 px-2 py-1 text-xs"
-                >
-                  {{ link.mode }}
-                </span>
-              }
-            </a>
-          </li>
+        @if (route.children) {
+          @for (link of route.children; track $index) {
+            <li>
+              <app-sidebar-link [link]="link"></app-sidebar-link>
+            </li>
+          }
+        }
+        @if (route.groups) {
+          @for (group of route.groups; track $index) {
+            <li class="pl-4">
+              <ul class="list-none pl-0">
+                <li class="mb-3">{{ group.name }}</li>
+                @for (link of group.children; track $index) {
+                  <li>
+                    <app-sidebar-link [link]="link"></app-sidebar-link>
+                  </li>
+                }
+              </ul>
+            </li>
+          }
         }
       </ul>
     }
