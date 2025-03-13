@@ -10,7 +10,7 @@ import {
   createOnIncr,
   createOnLeave,
 } from '@ngverse/motion/core';
-import { getAnimatecssDefaults } from './common/animate-css-defaults';
+import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
 const defaults = createDefaults();
 const name = `bounce`;

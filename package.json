@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run serve --project=docs --no-hmr",
-    "generate": "npx nx generate @schematics/angular:component",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "prepare": "husky",
     "build:motion": "npx nx run motion:build",
     "build:docs": "npx nx run docs:build",
     "check:docs": "npm run build:docs && npx nx run docs:lint  && npm run format:check",
-    "check:motion": "npm run build:motion && npx nx run motion:lint  && npm run format:check"
+    "check:motion": "npm run build:motion && npx nx run motion:lint  && npm run format:check",
+    "generate-component": "npx nx generate @schematics/angular:component"
   },
   "private": true,
   "lint-staged": {
