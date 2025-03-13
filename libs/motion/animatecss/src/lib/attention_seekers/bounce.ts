@@ -4,7 +4,7 @@
 import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
-  createMotionMotion,
+  createMotionFromAnimate,
   createOnDecr,
   createOnEnter,
   createOnIncr,
@@ -18,7 +18,7 @@ const name = `bounce`;
 /**
  * bounce animation
  */
-export const bounce = createMotionMotion(
+export const bounce = createMotionFromAnimate(
   keyframes([
     style({
       transform: 'translate3d(0, 0, 0)',

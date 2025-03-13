@@ -4,7 +4,7 @@
 import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
-  createMotionMotion,
+  createMotionFromAnimate,
   createOnEnter,
   createOnIncr,
   MotionOptions,
@@ -28,7 +28,7 @@ const name = `backInUp`;
 /**
  * backInUp animation
  */
-export const backInUp = createMotionMotion(
+export const backInUp = createMotionFromAnimate(
   keyframes([
     style({
       transform: 'translateY({{startTranslateY}}) scale(0.7)',

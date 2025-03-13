@@ -6,6 +6,11 @@ import {
   backInUp,
   bounce,
   flash,
+  flip,
+  flipInX,
+  flipInY,
+  flipOutX,
+  flipOutY,
   pulse,
 } from '@ngverse/motion/animatecss';
 
@@ -125,6 +130,36 @@ export const ANIMATE_DATA: MotionData = [
             description: 'The starting position of the element',
           },
         ],
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flip'),
+        name: 'flip',
+        triggers: [TRIGGER_TYPES.All],
+        motion: flip,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipInX'),
+        name: 'flipInX',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: flipInX,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipInY'),
+        name: 'flipInY',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: flipInY,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipOutX'),
+        name: 'flipOutX',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: flipOutX,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipOutX'),
+        name: 'flipOutY',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: flipOutY,
       },
     ],
   },
