@@ -26,7 +26,7 @@ const name = `collapse`;
 /**
  * collapse animation
  */
-export const collapse = createMotionFromAnimate(
+export const collapse = createMotionFromAnimate<collapseMotionOptions>(
   keyframes([
     style({
       height: AUTO_STYLE,

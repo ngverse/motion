@@ -28,7 +28,7 @@ const name = `backInDown`;
 /**
  * backInDown animation
  */
-export const backInDown = createMotionFromAnimate(
+export const backInDown = createMotionFromAnimate<backInDownMotionOptions>(
   keyframes([
     style({
       transform: 'translateY({{startTranslateY}}) scale(0.7)',

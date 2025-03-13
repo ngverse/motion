@@ -1,5 +1,5 @@
 /**
- * ref: https://github.com/animate-css/animate.css/blob/main/source/flippers/expand.css
+ * ref: https://github.com/animate-css/animate.css/blob/main/source/flippers/expandX.css
  */
 import { AUTO_STYLE, keyframes, style } from '@angular/animations';
 import {
@@ -11,32 +11,32 @@ import {
 } from '@ngverse/motion/core';
 import { getGeneralDefaults } from './common/general-defaults';
 
-interface expandMotionOptions extends MotionOptions {
+interface expandXMotionOptions extends MotionOptions {
   /**
-   * The starting height of the element
+   * The starting width of the element
    */
-  startHeight: string;
+  startWidth: string;
 }
 
-const defaults = createDefaults<expandMotionOptions>({
-  startHeight: '0px',
+const defaults = createDefaults<expandXMotionOptions>({
+  startWidth: '0px',
 });
-const name = `expand`;
+const name = `expandX`;
 
 /**
- * expand animation
+ * expandX animation
  */
-export const expand = createMotionFromAnimate<expandMotionOptions>(
+export const expandX = createMotionFromAnimate<expandXMotionOptions>(
   keyframes([
     style({
-      height: '{{startHeight}}',
+      width: '{{startWidth}}',
       visibility: 'hidden',
       overflow: 'hidden',
       easing: 'ease-out',
       offset: 0,
     }),
     style({
-      height: AUTO_STYLE,
+      width: AUTO_STYLE,
       visibility: AUTO_STYLE,
       overflow: 'hidden',
       easing: 'ease-out',
@@ -48,22 +48,22 @@ export const expand = createMotionFromAnimate<expandMotionOptions>(
 );
 
 /**
- * expand animation on :enter
- * @remarks triggerName: `expandOnEnter`
+ * expandX animation on :enter
+ * @remarks triggerName: `expandXOnEnter`
  */
-export const expandOnEnter = createOnEnter(
-  expand,
+export const expandXOnEnter = createOnEnter(
+  expandX,
   name,
   defaults,
   getGeneralDefaults()
 );
 
 /**
- * expand animation on :incr
- * @remarks triggerName: `expandOnIncr`
+ * expandX animation on :incr
+ * @remarks triggerName: `expandXOnIncr`
  */
-export const expandOnIncr = createOnIncr(
-  expand,
+export const expandXOnIncr = createOnIncr(
+  expandX,
   name,
   defaults,
   getGeneralDefaults()

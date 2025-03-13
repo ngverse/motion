@@ -28,7 +28,7 @@ const name = `backInUp`;
 /**
  * backInUp animation
  */
-export const backInUp = createMotionFromAnimate(
+export const backInUp = createMotionFromAnimate<backInUpMotionOptions>(
   keyframes([
     style({
       transform: 'translateY({{startTranslateY}}) scale(0.7)',
