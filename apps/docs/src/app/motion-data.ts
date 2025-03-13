@@ -2,6 +2,7 @@ import { AnimationReferenceMetadata } from '@angular/animations';
 import {
   backInDown,
   backInLeft,
+  backInRight,
   bounce,
   flash,
   pulse,
@@ -92,6 +93,20 @@ export const ANIMATE_DATA: MotionData = [
             name: 'startTranslateX',
             type: 'string',
             default: '-2000px',
+            description: 'The starting position of the element',
+          },
+        ],
+      },
+      {
+        href: getAnimatecssLink('back_entrances', 'backInRight'),
+        name: 'backInRight',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: backInRight,
+        options: [
+          {
+            name: 'startTranslateX',
+            type: 'string',
+            default: '2000px',
             description: 'The starting position of the element',
           },
         ],
