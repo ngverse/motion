@@ -44,7 +44,7 @@ export const SIDEBAR_ROUTES = [
         ].sort((a, b) => a.name.localeCompare(b.name)),
       },
     ],
-  },
+  }
 ] as SidebarRoot[];
 
 function animateCSSLink(name: string) {
