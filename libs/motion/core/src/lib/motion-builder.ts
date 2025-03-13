@@ -34,10 +34,10 @@ function resolveChildren(
   }
 }
 
-export function createDefaults<T extends MotionOptions>(options?: T) {
+export function createDefaults<T extends MotionOptions>(options?: T): T {
   return {
     ...options,
-  };
+  } as T;
 }
 
 export function setDefaults<T extends MotionOptions>(defaults: T) {
@@ -75,7 +75,7 @@ export function createMotion<T extends MotionOptions>(
       delay: _delay,
       params: {
         time: mapToTime(_duration, _easing),
-        ...options,
+        ...parsedOptions,
       },
     };
     return useAnimation(animation, animationOptions);
@@ -106,7 +106,7 @@ export function createTrigger<T extends TriggerMotionOptions>(
   triggerName: string,
   transitionName: string,
   defaults: T,
-  globalDefaults: T
+  globalDefaults: TriggerMotionOptions
 ) {
   return (options?: T) => {
     const _triggerName = options?.triggerName ?? triggerName;
@@ -127,7 +127,7 @@ export function createOnEnter<T extends TriggerMotionOptions>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
-  globalDefaults: T
+  globalDefaults: TriggerMotionOptions
 ) {
   return createTrigger<T>(
     rawFactory,
@@ -142,7 +142,7 @@ export function createOnLeave<T extends TriggerMotionOptions>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
-  globalDefaults: T
+  globalDefaults: TriggerMotionOptions
 ) {
   return createTrigger<T>(
     rawFactory,
@@ -157,7 +157,7 @@ export function createOnIncr<T extends TriggerMotionOptions>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
-  globalDefaults: T
+  globalDefaults: TriggerMotionOptions
 ) {
   return createTrigger<T>(
     rawFactory,
@@ -172,7 +172,7 @@ export function createOnDecr<T extends TriggerMotionOptions>(
   rawFactory: CreateMotionFactory<any>,
   name: string,
   defaults: T,
-  globalDefaults: T
+  globalDefaults: TriggerMotionOptions
 ) {
   return createTrigger<T>(
     rawFactory,
