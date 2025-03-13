@@ -18,7 +18,7 @@
       "@ngverse/motion": ["libs/motion/src/index.ts"],
       "@ngverse/motion/animatecss": ["libs/motion/animatecss/src/index.ts"],
       "@ngverse/motion/core": ["libs/motion/core/src/index.ts"],
-      "@ngverse/motion/general": ["libs/motion/general/src/index.ts"],
+      "@ngverse/motion/generalcss": ["libs/motion/generalcss/src/index.ts"],
       "@ngverse/motion/magiccss": ["libs/motion/magiccss/src/index.ts"]
     }
   },

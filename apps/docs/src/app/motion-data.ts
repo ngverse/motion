@@ -17,7 +17,7 @@ import {
   rollIn,
   rollOut,
 } from '@ngverse/motion/animatecss';
-import { expand } from '@ngverse/motion/general';
+import { collapse, expand } from '@ngverse/motion/generalcss';
 
 export enum TRIGGER_TYPES {
   Enter = 'enter',
@@ -60,12 +60,33 @@ function getAnimatecssLink(group: string, name: string) {
 
 export const ANIMATE_DATA: MotionData = [
   {
-    name: 'general',
+    name: 'generalcss',
     motions: [
       {
         name: 'expand',
         triggers: [TRIGGER_TYPES.AllEnters],
         motion: expand,
+        options: [
+          {
+            name: 'startHeight',
+            type: 'string',
+            default: '0px',
+            description: 'The starting height of the element',
+          },
+        ],
+      },
+      {
+        name: 'collapse',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: collapse,
+        options: [
+          {
+            name: 'endHeight',
+            type: 'string',
+            default: '0px',
+            description: 'The ending height of the element',
+          },
+        ],
       },
     ],
   },
@@ -77,14 +98,6 @@ export const ANIMATE_DATA: MotionData = [
         name: 'flash',
         triggers: [TRIGGER_TYPES.All],
         motion: flash,
-        options: [
-          {
-            name: 'startHeight',
-            type: 'string',
-            default: '0px',
-            description: 'The starting height of the element',
-          },
-        ],
       },
       {
         href: getAnimatecssLink('attention_seekers', 'bounce'),
