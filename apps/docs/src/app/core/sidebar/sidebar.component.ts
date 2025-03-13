@@ -64,7 +64,12 @@ export const SIDEBAR_ROUTES = [
       },
       {
         name: 'Specials',
-        children: [animateCSSLink('hinge'), animateCSSLink('jackInTheBox')],
+        children: [
+          animateCSSLink('hinge'),
+          animateCSSLink('jackInTheBox'),
+          animateCSSLink('rollOut'),
+          animateCSSLink('rollIn'),
+        ],
       },
     ],
   },
