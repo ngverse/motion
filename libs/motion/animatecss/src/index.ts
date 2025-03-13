@@ -15,3 +15,7 @@ export * from './lib/flippers/flip-in-x';
 export * from './lib/flippers/flip-in-y';
 export * from './lib/flippers/flip-out-x';
 export * from './lib/flippers/flip-out-y';
+
+/** Specials */
+export * from './lib/specials/hinge';
+export * from './lib/specials/jack-in-the-box';

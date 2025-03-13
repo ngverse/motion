@@ -54,9 +54,9 @@ function getOptions<T extends MotionOptions>(
   globalDefaults: T
 ): Required<T> {
   return {
-    ...options, // Base settings
-    ...defaults, // Override global defaults if specified
-    ...globalDefaults, // Override instance defaults if explicitly provided
+    ...globalDefaults,
+    ...defaults,
+    ...options,
   } as Required<T>;
 }
 
