@@ -60,6 +60,12 @@ export class MotionPageComponent {
     if (firstTrigger === TRIGGER_TYPES.AllExceptLeave) {
       return [TRIGGER_TYPES.Enter, TRIGGER_TYPES.Incr, TRIGGER_TYPES.Decr];
     }
+    if (firstTrigger === TRIGGER_TYPES.AllEnters) {
+      return [TRIGGER_TYPES.Enter, TRIGGER_TYPES.Incr];
+    }
+    if (firstTrigger === TRIGGER_TYPES.AllLeaves) {
+      return [TRIGGER_TYPES.Leave, TRIGGER_TYPES.Decr];
+    }
     return triggers;
   });
 

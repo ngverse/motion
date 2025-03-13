@@ -1,5 +1,11 @@
 import { AnimationReferenceMetadata } from '@angular/animations';
-import { backInDown, bounce, flash, pulse } from '@ngverse/motion/animatecss';
+import {
+  backInDown,
+  backInLeft,
+  bounce,
+  flash,
+  pulse,
+} from '@ngverse/motion/animatecss';
 
 export enum TRIGGER_TYPES {
   Enter = 'enter',
@@ -9,6 +15,8 @@ export enum TRIGGER_TYPES {
   All = 'all',
   AllExceptEnter = 'allExceptEnter',
   AllExceptLeave = 'allExceptLeave',
+  AllEnters = 'allEnters',
+  AllLeaves = 'allLeaves',
 }
 
 export interface MotionOption {
@@ -63,13 +71,27 @@ export const ANIMATE_DATA: MotionData = [
       {
         href: getAnimatecssLink('back_entrances', 'backInDown'),
         name: 'backInDown',
-        triggers: [TRIGGER_TYPES.AllExceptLeave],
+        triggers: [TRIGGER_TYPES.AllEnters],
         motion: backInDown,
         options: [
           {
             name: 'startTranslateY',
             type: 'string',
             default: '-1200px',
+            description: 'The starting position of the element',
+          },
+        ],
+      },
+      {
+        href: getAnimatecssLink('back_entrances', 'backInLeft'),
+        name: 'backInLeft',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: backInLeft,
+        options: [
+          {
+            name: 'startTranslateX',
+            type: 'string',
+            default: '-2000px',
             description: 'The starting position of the element',
           },
         ],

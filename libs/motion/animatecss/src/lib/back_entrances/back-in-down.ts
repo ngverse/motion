@@ -5,7 +5,6 @@ import { keyframes, style } from '@angular/animations';
 import {
   createDefaults,
   createMotionMotion,
-  createOnDecr,
   createOnEnter,
   createOnIncr,
   MotionOptions,
@@ -13,14 +12,14 @@ import {
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-interface BackInDownMotionOptions extends MotionOptions {
+interface backInDownMotionOptions extends MotionOptions {
   /**
    * The starting position of the element
    */
   startTranslateY: string;
 }
 
-const defaults = createDefaults<BackInDownMotionOptions>({
+const defaults = createDefaults<backInDownMotionOptions>({
   startTranslateY: '-1200px',
 });
 
@@ -51,7 +50,7 @@ export const backInDown = createMotionMotion(
  * sets default values for the `backInDown` animation
  */
 export const setBackInDownDefaults =
-  setDefaults<BackInDownMotionOptions>(defaults);
+  setDefaults<backInDownMotionOptions>(defaults);
 
 /**
  * backInDown animation on :enter
@@ -69,17 +68,6 @@ export const backInDownOnEnter = createOnEnter(
  * @remarks triggerName: `backInDownOnIncr`
  */
 export const backInDownOnIncr = createOnIncr(
-  backInDown,
-  name,
-  defaults,
-  getAnimatecssDefaults()
-);
-
-/**
- * backInDown animation on :decr
- * @remarks triggerName: `backInDownOnDecr`
- */
-export const backInDownOnDecr = createOnDecr(
   backInDown,
   name,
   defaults,
