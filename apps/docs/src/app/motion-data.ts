@@ -8,6 +8,9 @@ import {
   flash,
   flip,
   flipInX,
+  flipInY,
+  flipOutX,
+  flipOutY,
   pulse,
 } from '@ngverse/motion/animatecss';
 
@@ -139,6 +142,24 @@ export const ANIMATE_DATA: MotionData = [
         name: 'flipInX',
         triggers: [TRIGGER_TYPES.AllEnters],
         motion: flipInX,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipInY'),
+        name: 'flipInY',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: flipInY,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipOutX'),
+        name: 'flipOutX',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: flipOutX,
+      },
+      {
+        href: getAnimatecssLink('flippers', 'flipOutX'),
+        name: 'flipOutY',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: flipOutY,
       },
     ],
   },

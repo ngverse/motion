@@ -54,7 +54,13 @@ export const SIDEBAR_ROUTES = [
       },
       {
         name: 'Flippers',
-        children: [animateCSSLink('flip'), animateCSSLink('flipInX')],
+        children: [
+          animateCSSLink('flip'),
+          animateCSSLink('flipInX'),
+          animateCSSLink('flipInY'),
+          animateCSSLink('flipOutX'),
+          animateCSSLink('flipOutY'),
+        ],
       },
     ],
   },

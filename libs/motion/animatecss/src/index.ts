@@ -12,3 +12,6 @@ export * from './lib/back_entrances/back-in-up';
 /** Flippers */
 export * from './lib/flippers/flip';
 export * from './lib/flippers/flip-in-x';
+export * from './lib/flippers/flip-in-y';
+export * from './lib/flippers/flip-out-x';
+export * from './lib/flippers/flip-out-y';

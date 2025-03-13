@@ -1,5 +1,5 @@
 /**
- * ref: https://github.com/animate-css/animate.css/blob/main/source/flippers/flipInX.css
+ * ref: https://github.com/animate-css/animate.css/blob/main/source/flippers/flipInY.css
  */
 import { keyframes, style } from '@angular/animations';
 import {
@@ -11,34 +11,34 @@ import {
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
 const defaults = createDefaults();
-const name = `flipInX`;
+const name = `flipInY`;
 
 /**
- * flipInX animation
+ * flipInY animation
  */
-export const flipInX = createMotionFromAnimate(
+export const flipInY = createMotionFromAnimate(
   keyframes([
     style({
       visibility: 'visible',
-      transform: 'perspective(400px) rotate3d(1, 0, 0, 90deg)',
+      transform: 'perspective(400px) rotate3d(0, 1, 0, 90deg)',
       opacity: 0,
       easing: 'ease-in',
       offset: 0,
     }),
     style({
-      transform: 'perspective(400px) rotate3d(1, 0, 0, -20deg)',
+      transform: 'perspective(400px) rotate3d(0, 1, 0, -20deg)',
       opacity: 0.5,
       easing: 'ease-in',
       offset: 0.4,
     }),
     style({
-      transform: 'perspective(400px) rotate3d(1, 0, 0, 10deg)',
+      transform: 'perspective(400px) rotate3d(0, 1, 0, 10deg)',
       opacity: 1,
       easing: 'ease-in',
       offset: 0.6,
     }),
     style({
-      transform: 'perspective(400px) rotate3d(1, 0, 0, -5deg)',
+      transform: 'perspective(400px) rotate3d(0, 1, 0, -5deg)',
       easing: 'ease',
       offset: 0.8,
     }),
@@ -49,22 +49,22 @@ export const flipInX = createMotionFromAnimate(
 );
 
 /**
- * flipInX animation on :enter
- * @remarks triggerName: `flipInXOnEnter`
+ * flipInY animation on :enter
+ * @remarks triggerName: `flipInYOnEnter`
  */
-export const flipInXOnEnter = createOnEnter(
-  flipInX,
+export const flipInYOnEnter = createOnEnter(
+  flipInY,
   name,
   defaults,
   getAnimatecssDefaults()
 );
 
 /**
- * flipInX animation on :incr
- * @remarks triggerName: `flipInXOnIncr`
+ * flipInY animation on :incr
+ * @remarks triggerName: `flipInYOnIncr`
  */
-export const flipInXOnIncr = createOnIncr(
-  flipInX,
+export const flipInYOnIncr = createOnIncr(
+  flipInY,
   name,
   defaults,
   getAnimatecssDefaults()

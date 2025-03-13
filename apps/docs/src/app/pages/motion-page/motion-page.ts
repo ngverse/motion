@@ -116,9 +116,17 @@ export class MotionPageComponent {
       if (motion) {
         this.motion.set(motion);
         const animationFactory = this.animationBuilder.build(motion.motion());
+        this.animationPlaher?.destroy();
         this.animationPlaher = animationFactory?.create(
           this.playable()?.nativeElement
         );
+        try {
+          this.animationPlaher?.onDone(() => {
+            this.animationPlaher?.reset();
+          });
+          // eslint-disable-next-line no-empty
+        } catch {}
+
         if (this.platform.isBrowser) {
           setTimeout(() => {
             this.play();
