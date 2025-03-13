@@ -1,11 +1,6 @@
 import { AnimationReferenceMetadata } from '@angular/animations';
 import { bounce, flash, pulse } from '@ngverse/motion/animatecss';
 
-interface MotionVariant {
-  name: string;
-  triggerName: string;
-}
-
 export enum TRIGGER_TYPES {
   Enter = 'enter',
   Leave = 'leave',
