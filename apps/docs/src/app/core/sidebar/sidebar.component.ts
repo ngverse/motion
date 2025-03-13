@@ -49,6 +49,7 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('backInDown'),
           animateCSSLink('backInLeft'),
           animateCSSLink('backInRight'),
+          animateCSSLink('backInUp'),
         ].sort((a, b) => a.name.localeCompare(b.name)),
       },
     ],

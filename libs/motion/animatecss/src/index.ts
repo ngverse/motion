@@ -7,3 +7,4 @@ export * from './lib/attention_seekers/pulse';
 export * from './lib/back_entrances/back-in-down';
 export * from './lib/back_entrances/back-in-left';
 export * from './lib/back_entrances/back-in-right';
+export * from './lib/back_entrances/back-in-up';
