@@ -1,7 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './core/header/header.component';
-
 @Component({
   imports: [RouterModule, HeaderComponent],
   selector: 'app-root',

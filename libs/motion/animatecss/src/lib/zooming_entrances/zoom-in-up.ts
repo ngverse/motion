@@ -50,7 +50,7 @@ export const zoomInUp = createMotionFromAnimate<zoomInUpMotionOptions>(
 /**
  * sets default values for the `zoomInUp` animation
  */
-export const setzoomInUpDefaults = setDefaults<zoomInUpMotionOptions>(defaults);
+export const setZoomInUpDefaults = setDefaults<zoomInUpMotionOptions>(defaults);
 
 /**
  * zoomInUp animation on :enter

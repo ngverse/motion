@@ -41,7 +41,7 @@ export const zoomOutRight = createMotionFromAnimate<zoomOutRightMotionOptions>(
 /**
  * sets default values for the `zoomOutRight` animation
  */
-export const setzoomOutRightDefaults =
+export const setZoomOutRightDefaults =
   setDefaults<zoomOutRightMotionOptions>(defaults);
 
 /**

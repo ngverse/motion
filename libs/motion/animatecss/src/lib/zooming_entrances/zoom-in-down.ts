@@ -50,7 +50,7 @@ export const zoomInDown = createMotionFromAnimate<zoomInDownMotionOptions>(
 /**
  * sets default values for the `zoomInDown` animation
  */
-export const setzoomInDownDefaults =
+export const setZoomInDownDefaults =
   setDefaults<zoomInDownMotionOptions>(defaults);
 
 /**

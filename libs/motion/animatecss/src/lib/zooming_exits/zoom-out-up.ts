@@ -45,7 +45,7 @@ export const zoomOutUp = createMotionFromAnimate<zoomOutUpMotionOptions>(
 /**
  * sets default values for the `zoomOutUp` animation
  */
-export const setzoomOutUpDefaults =
+export const setZoomOutUpDefaults =
   setDefaults<zoomOutUpMotionOptions>(defaults);
 
 /**

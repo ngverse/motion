@@ -7,16 +7,20 @@ import {
   createMotionFromAnimate,
   createOnDecr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type rollOutMotionOptions = MotionOptions;
+
+const defaults = createDefaults<rollOutMotionOptions>();
 const name = `rollOut`;
 
 /**
  * rollOut animation
  */
-export const rollOut = createMotionFromAnimate(
+export const rollOut = createMotionFromAnimate<rollOutMotionOptions>(
   keyframes([
     style({
       opacity: 1,
@@ -34,6 +38,11 @@ export const rollOut = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `rollOut` animation
+ */
+export const setRollOutDefaults = setDefaults<rollOutMotionOptions>(defaults);
 
 /**
  * rollOut animation on :enter

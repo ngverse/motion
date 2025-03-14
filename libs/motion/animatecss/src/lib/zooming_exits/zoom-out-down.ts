@@ -45,7 +45,7 @@ export const zoomOutDown = createMotionFromAnimate<zoomOutDownMotionOptions>(
 /**
  * sets default values for the `zoomOutDown` animation
  */
-export const setzoomOutDownDefaults =
+export const setZoomOutDownDefaults =
   setDefaults<zoomOutDownMotionOptions>(defaults);
 
 /**

@@ -49,7 +49,7 @@ export const backInUp = createMotionFromAnimate<backInUpMotionOptions>(
 /**
  * sets default values for the `backInUp` animation
  */
-export const setbackInUpDefaults = setDefaults<backInUpMotionOptions>(defaults);
+export const setBackInUpDefaults = setDefaults<backInUpMotionOptions>(defaults);
 
 /**
  * backInUp animation on :enter

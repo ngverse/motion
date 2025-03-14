@@ -9,16 +9,20 @@ import {
   createOnEnter,
   createOnIncr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type flashMotionOptions = MotionOptions;
+
+const defaults = createDefaults<flashMotionOptions>();
 const name = `flash`;
 
 /**
  * flash animation
  */
-export const flash = createMotionFromAnimate(
+export const flash = createMotionFromAnimate<flashMotionOptions>(
   keyframes([
     style({ opacity: 1, offset: 0 }),
     style({ opacity: 0, offset: 0.25 }),
@@ -29,6 +33,11 @@ export const flash = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `flash` animation
+ */
+export const setFlashDefaults = setDefaults<flashMotionOptions>(defaults);
 
 /**
  * flash animation on :enter

@@ -9,16 +9,20 @@ import {
   createOnEnter,
   createOnIncr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type flipMotionOptions = MotionOptions;
+
+const defaults = createDefaults<flipMotionOptions>();
 const name = `flip`;
 
 /**
  * flip animation
  */
-export const flip = createMotionFromAnimate(
+export const flip = createMotionFromAnimate<flipMotionOptions>(
   keyframes([
     style({
       transform:
@@ -53,6 +57,11 @@ export const flip = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `flip` animation
+ */
+export const setFlipDefaults = setDefaults<flipMotionOptions>(defaults);
 
 /**
  * flip animation on :enter

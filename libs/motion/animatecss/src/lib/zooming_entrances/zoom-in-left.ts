@@ -50,7 +50,7 @@ export const zoomInLeft = createMotionFromAnimate<zoomInLeftMotionOptions>(
 /**
  * sets default values for the `zoomInLeft` animation
  */
-export const setzoomInLeftDefaults =
+export const setZoomInLeftDefaults =
   setDefaults<zoomInLeftMotionOptions>(defaults);
 
 /**
