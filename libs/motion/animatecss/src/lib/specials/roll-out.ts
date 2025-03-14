@@ -6,7 +6,7 @@ import {
   createDefaults,
   createMotionFromAnimate,
   createOnDecr,
-  createOnEnter,
+  createOnLeave,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
@@ -37,9 +37,9 @@ export const rollOut = createMotionFromAnimate(
 
 /**
  * rollOut animation on :enter
- * @remarks triggerName: `rollOutOnEnter`
+ * @remarks triggerName: `rollOutOnLeave`
  */
-export const rollOutOnEnter = createOnEnter(
+export const rollOutOnLeave = createOnLeave(
   rollOut,
   name,
   defaults,
