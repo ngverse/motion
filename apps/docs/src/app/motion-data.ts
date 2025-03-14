@@ -16,6 +16,11 @@ import {
   pulse,
   rollIn,
   rollOut,
+  zoomIn,
+  zoomInDown,
+  zoomInLeft,
+  zoomInRight,
+  zoomInUp,
 } from '@ngverse/motion/animatecss';
 import {
   collapse,
@@ -251,6 +256,36 @@ export const ANIMATE_DATA: MotionData = [
         name: 'rollOut',
         triggers: [TRIGGER_TYPES.AllLeaves],
         motion: rollOut,
+      },
+      {
+        href: getAnimatecssLink('zooming_entrances', 'zoomIn'),
+        name: 'zoomIn',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: zoomIn,
+      },
+      {
+        href: getAnimatecssLink('zooming_entrances', 'zoomInDown'),
+        name: 'zoomInDown',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: zoomInDown,
+      },
+      {
+        href: getAnimatecssLink('zooming_entrances', 'zoomInLeft'),
+        name: 'zoomInLeft',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: zoomInLeft,
+      },
+      {
+        href: getAnimatecssLink('zooming_entrances', 'zoomInRight'),
+        name: 'zoomInRight',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: zoomInRight,
+      },
+      {
+        href: getAnimatecssLink('zooming_entrances', 'zoomInUp'),
+        name: 'zoomInUp',
+        triggers: [TRIGGER_TYPES.AllEnters],
+        motion: zoomInUp,
       },
     ],
   },

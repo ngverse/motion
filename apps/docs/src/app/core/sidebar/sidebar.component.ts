@@ -80,6 +80,16 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('rollIn'),
         ],
       },
+      {
+        name: 'Zooming Entrances',
+        children: [
+          animateCSSLink('zoomIn'),
+          animateCSSLink('zoomInDown'),
+          animateCSSLink('zoomInLeft'),
+          animateCSSLink('zoomInRight'),
+          animateCSSLink('zoomInUp'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];
