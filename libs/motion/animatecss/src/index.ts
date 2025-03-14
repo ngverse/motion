@@ -31,3 +31,10 @@ export * from './lib/zooming_entrances/zoom-in-down';
 export * from './lib/zooming_entrances/zoom-in-left';
 export * from './lib/zooming_entrances/zoom-in-right';
 export * from './lib/zooming_entrances/zoom-in-up';
+
+/** Zooming Exits */
+export * from './lib/zooming_exits/zoom-out';
+export * from './lib/zooming_exits/zoom-out-down';
+export * from './lib/zooming_exits/zoom-out-left';
+export * from './lib/zooming_exits/zoom-out-right';
+export * from './lib/zooming_exits/zoom-out-up';

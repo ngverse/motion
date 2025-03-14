@@ -21,6 +21,11 @@ import {
   zoomInLeft,
   zoomInRight,
   zoomInUp,
+  zoomOut,
+  zoomOutDown,
+  zoomOutLeft,
+  zoomOutRight,
+  zoomOutUp,
 } from '@ngverse/motion/animatecss';
 import {
   collapse,
@@ -286,6 +291,37 @@ export const ANIMATE_DATA: MotionData = [
         name: 'zoomInUp',
         triggers: [TRIGGER_TYPES.AllEnters],
         motion: zoomInUp,
+      },
+
+      {
+        href: getAnimatecssLink('zooming_exits', 'zoomOut'),
+        name: 'zoomOut',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: zoomOut,
+      },
+      {
+        href: getAnimatecssLink('zooming_exits', 'zoomOutDown'),
+        name: 'zoomOutDown',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: zoomOutDown,
+      },
+      {
+        href: getAnimatecssLink('zooming_exits', 'zoomOutLeft'),
+        name: 'zoomOutLeft',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: zoomOutLeft,
+      },
+      {
+        href: getAnimatecssLink('zooming_exits', 'zoomOutRight'),
+        name: 'zoomOutRight',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: zoomOutRight,
+      },
+      {
+        href: getAnimatecssLink('zooming_exits', 'zoomOutUp'),
+        name: 'zoomOutUp',
+        triggers: [TRIGGER_TYPES.AllLeaves],
+        motion: zoomOutUp,
       },
     ],
   },

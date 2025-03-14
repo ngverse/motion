@@ -90,6 +90,16 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('zoomInUp'),
         ],
       },
+      {
+        name: 'Zooming Exits',
+        children: [
+          animateCSSLink('zoomOut'),
+          animateCSSLink('zoomOutDown'),
+          animateCSSLink('zoomOutLeft'),
+          animateCSSLink('zoomOutRight'),
+          animateCSSLink('zoomOutUp'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];
