@@ -65,7 +65,7 @@ export function createMotion<T extends Partial<MotionOptions>>(
   defaults: MotionOptions,
   globalDefaults: MotionOptions
 ) {
-  return (options?: T) => {
+  return (options?: Partial<T>) => {
     const parsedOptions = getOptions(options, defaults, globalDefaults);
     const _duration = parsedOptions.duration;
     const _delay = parsedOptions.delay;
@@ -108,7 +108,7 @@ export function createTrigger<T extends Partial<TriggerMotionOptions>>(
   defaults: T,
   globalDefaults: TriggerMotionOptions
 ) {
-  return (options?: T) => {
+  return (options?: Partial<T>) => {
     const _triggerName = options?.triggerName ?? triggerName;
     const parsedOptions = getOptions(options, defaults, globalDefaults);
     const _transitionName = transitionName;
