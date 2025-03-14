@@ -9,16 +9,20 @@ import {
   createOnEnter,
   createOnIncr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type jackInTheBoxMotionOptions = MotionOptions;
+
+const defaults = createDefaults<jackInTheBoxMotionOptions>();
 const name = `jackInTheBox`;
 
 /**
  * jackInTheBox animation
  */
-export const jackInTheBox = createMotionFromAnimate(
+export const jackInTheBox = createMotionFromAnimate<jackInTheBoxMotionOptions>(
   keyframes([
     style({
       'transform-origin': 'center bottom',
@@ -48,6 +52,12 @@ export const jackInTheBox = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `jackInTheBox` animation
+ */
+export const setJackInTheBoxDefaults =
+  setDefaults<jackInTheBoxMotionOptions>(defaults);
 
 /**
  * jackInTheBox animation on :enter

@@ -34,7 +34,7 @@ export const zoomOut = createMotionFromAnimate<zoomOutMotionOptions>(
 /**
  * sets default values for the `zoomOut` animation
  */
-export const setzoomOutDefaults = setDefaults<zoomOutMotionOptions>(defaults);
+export const setZoomOutDefaults = setDefaults<zoomOutMotionOptions>(defaults);
 
 /**
  * zoomOut animation on :enter

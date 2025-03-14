@@ -49,7 +49,7 @@ export const backInRight = createMotionFromAnimate<backInRightMotionOptions>(
 /**
  * sets default values for the `backInRight` animation
  */
-export const setbackInRightDefaults =
+export const setBackInRightDefaults =
   setDefaults<backInRightMotionOptions>(defaults);
 
 /**

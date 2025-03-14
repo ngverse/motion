@@ -7,16 +7,20 @@ import {
   createMotionFromAnimate,
   createOnEnter,
   createOnIncr,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type flipInXMotionOptions = MotionOptions;
+
+const defaults = createDefaults<flipInXMotionOptions>();
 const name = `flipInX`;
 
 /**
  * flipInX animation
  */
-export const flipInX = createMotionFromAnimate(
+export const flipInX = createMotionFromAnimate<flipInXMotionOptions>(
   keyframes([
     style({
       visibility: 'visible',
@@ -47,6 +51,11 @@ export const flipInX = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `flipInX` animation
+ */
+export const setFlipInXDefaults = setDefaults<flipInXMotionOptions>(defaults);
 
 /**
  * flipInX animation on :enter

@@ -9,16 +9,20 @@ import {
   createOnEnter,
   createOnIncr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type pulseMotionOptions = MotionOptions;
+
+const defaults = createDefaults<pulseMotionOptions>();
 const name = `pulse`;
 
 /**
  * pulse animation
  */
-export const pulse = createMotionFromAnimate(
+export const pulse = createMotionFromAnimate<pulseMotionOptions>(
   keyframes([
     style({ transform: 'scale3d(1, 1, 1)', offset: 0 }),
     style({ transform: 'scale3d(1.05, 1.05, 1.05)', offset: 0.5 }),
@@ -27,6 +31,11 @@ export const pulse = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `pulse` animation
+ */
+export const setPulseDefaults = setDefaults<pulseMotionOptions>(defaults);
 
 /**
  * pulse animation on :enter

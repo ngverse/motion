@@ -7,16 +7,20 @@ import {
   createMotionFromAnimate,
   createOnEnter,
   createOnIncr,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type rollInMotionOptions = MotionOptions;
+
+const defaults = createDefaults<rollInMotionOptions>();
 const name = `rollIn`;
 
 /**
  * rollIn animation
  */
-export const rollIn = createMotionFromAnimate(
+export const rollIn = createMotionFromAnimate<rollInMotionOptions>(
   keyframes([
     style({
       visibilityroll: 'visible',
@@ -33,6 +37,11 @@ export const rollIn = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `rollIn` animation
+ */
+export const setRollInDefaults = setDefaults<rollInMotionOptions>(defaults);
 
 /**
  * rollIn animation on :enter

@@ -33,7 +33,7 @@ export const zoomIn = createMotionFromAnimate<zoomInMotionOptions>(
 /**
  * sets default values for the `zoomIn` animation
  */
-export const setzoomInDefaults = setDefaults<zoomInMotionOptions>(defaults);
+export const setZoomInDefaults = setDefaults<zoomInMotionOptions>(defaults);
 
 /**
  * zoomIn animation on :enter

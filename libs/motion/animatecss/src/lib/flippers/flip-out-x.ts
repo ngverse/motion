@@ -7,16 +7,20 @@ import {
   createMotionFromAnimate,
   createOnDecr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type flipOutXMotionOptions = MotionOptions;
+
+const defaults = createDefaults<flipOutXMotionOptions>();
 const name = `flipOutX`;
 
 /**
  * flipOutX animation
  */
-export const flipOutX = createMotionFromAnimate(
+export const flipOutX = createMotionFromAnimate<flipOutXMotionOptions>(
   keyframes([
     style({
       transform: 'perspective(400px)',
@@ -40,6 +44,11 @@ export const flipOutX = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `flipOutX` animation
+ */
+export const setFlipOutXDefaults = setDefaults<flipOutXMotionOptions>(defaults);
 
 /**
  * flipOutX animation on :leave

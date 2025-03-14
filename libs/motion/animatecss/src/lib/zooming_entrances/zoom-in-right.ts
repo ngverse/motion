@@ -50,7 +50,7 @@ export const zoomInRight = createMotionFromAnimate<zoomInRightMotionOptions>(
 /**
  * sets default values for the `zoomInRight` animation
  */
-export const setzoomInRightDefaults =
+export const setZoomInRightDefaults =
   setDefaults<zoomInRightMotionOptions>(defaults);
 
 /**

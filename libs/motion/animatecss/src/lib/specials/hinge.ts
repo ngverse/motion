@@ -9,10 +9,14 @@ import {
   createOnEnter,
   createOnIncr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults({
+type hingeMotionOptions = MotionOptions;
+
+const defaults = createDefaults<hingeMotionOptions>({
   duration: getAnimatecssDefaults().duration * 2,
 });
 const name = `hinge`;
@@ -20,7 +24,7 @@ const name = `hinge`;
 /**
  * hinge animation
  */
-export const hinge = createMotionFromAnimate(
+export const hinge = createMotionFromAnimate<hingeMotionOptions>(
   keyframes([
     style({
       opacity: 1,
@@ -68,6 +72,11 @@ export const hinge = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `hinge` animation
+ */
+export const setHingeDefaults = setDefaults<hingeMotionOptions>(defaults);
 
 /**
  * hinge animation on :enter

@@ -9,16 +9,20 @@ import {
   createOnEnter,
   createOnIncr,
   createOnLeave,
+  MotionOptions,
+  setDefaults,
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-const defaults = createDefaults();
+type bounceMotionOptions = MotionOptions;
+
+const defaults = createDefaults<bounceMotionOptions>();
 const name = `bounce`;
 
 /**
  * bounce animation
  */
-export const bounce = createMotionFromAnimate(
+export const bounce = createMotionFromAnimate<bounceMotionOptions>(
   keyframes([
     style({
       transform: 'translate3d(0, 0, 0)',
@@ -63,6 +67,11 @@ export const bounce = createMotionFromAnimate(
   defaults,
   getAnimatecssDefaults()
 );
+
+/**
+ * sets default values for the `bounce` animation
+ */
+export const setBounceDefaults = setDefaults<bounceMotionOptions>(defaults);
 
 /**
  * bounce animation on :enter
