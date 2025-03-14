@@ -1,8 +1,18 @@
-## 0.2.0 (2025-03-13)
+## 0.2.0 (2025-03-14)
 
 ### 🚀 Features
 
 - add collapse-x,expand-x ([518eb13](https://github.com/ngverse/animate/commit/518eb13))
+- zoom_exits,zoom_entrances ([#12](https://github.com/ngverse/animate/pull/12))
+
+### 🩹 Fixes
+
+- add partial option ([d3534b2](https://github.com/ngverse/animate/commit/d3534b2))
+- add default options and option types ([#13](https://github.com/ngverse/animate/pull/13))
+
+### ❤️ Thank You
+
+- lukonik @lukonik
 
 ### ❤️ Thank You
 
