@@ -4,6 +4,10 @@ import {
   backInLeft,
   backInRight,
   backInUp,
+  backOutDown,
+  backOutLeft,
+  backOutRight,
+  backOutUp,
   bounce,
   bounceIn,
   bounceInDown,
@@ -177,6 +181,12 @@ export const ANIMATE_CSS_DATA: MotionGroup = {
         description: 'The starting position of the element',
       },
     ]),
+
+    getAllLeaves('back_exits', 'backOutDown', backOutDown),
+    getAllLeaves('back_exits', 'backOutLeft', backOutLeft),
+    getAllLeaves('back_exits', 'backOutRight', backOutRight),
+    getAllLeaves('back_exits', 'backOutUp', backOutUp),
+
     getAllStates('flippers', 'flip', flip),
     getAllEnters('flippers', 'flipInX', flipInX),
     getAllEnters('flippers', 'flipInY', flipInY),

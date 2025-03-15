@@ -71,6 +71,15 @@ export const SIDEBAR_ROUTES = [
         ],
       },
       {
+        name: 'Back Exits',
+        children: [
+          animateCSSLink('backOutDown'),
+          animateCSSLink('backOutLeft'),
+          animateCSSLink('backOutRight'),
+          animateCSSLink('backOutUp'),
+        ],
+      },
+      {
         name: 'Flippers',
         children: [
           animateCSSLink('flip'),
