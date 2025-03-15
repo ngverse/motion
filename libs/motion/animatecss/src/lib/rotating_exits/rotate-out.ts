@@ -1,5 +1,5 @@
 /**
- * ref: https://github.com/animate-css/animate.css/blob/main/source/zooming_entrances/zoomOut.css
+ * ref: https://github.com/animate-css/animate.css/blob/main/source/rotating_exits/rotateOut.css
  */
 import { keyframes, style } from '@angular/animations';
 import {
@@ -12,47 +12,57 @@ import {
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-type zoomOutMotionOptions = MotionOptions;
+type rotateOutMotionOptions = MotionOptions;
 
-const defaults = createDefaults<zoomOutMotionOptions>();
+const defaults = createDefaults<rotateOutMotionOptions>();
 
-const name = `zoomOut`;
+const name = `rotateOut`;
 
 /**
- * zoomOut animation
+ * rotateOut animation
  */
-export const zoomOut = createMotionFromAnimate<zoomOutMotionOptions>(
+export const rotateOut = createMotionFromAnimate<rotateOutMotionOptions>(
   keyframes([
-    style({ opacity: 1, offset: 0 }),
-    style({ opacity: 0, transform: 'scale3d(0.3, 0.3, 0.3)', offset: 0.5 }),
-    style({ opacity: 0, offset: 1 }),
+    style({
+      'transform-origin': 'center',
+      opacity: 1,
+      easing: 'ease',
+      offset: 0,
+    }),
+    style({
+      opacity: 0,
+      transform: 'rotate(200deg)',
+      easing: 'ease',
+      offset: 1,
+    }),
   ]),
   defaults,
   getAnimatecssDefaults()
 );
 
 /**
- * sets default values for the `zoomOut` animation
+ * sets default values for the `rotateOut` animation
  */
-export const setZoomOutDefaults = setDefaults<zoomOutMotionOptions>(defaults);
+export const setRotateOutDefaults =
+  setDefaults<rotateOutMotionOptions>(defaults);
 
 /**
- * zoomOut animation on :enter
- * @remarks triggerName: `zoomOutOnLeave`
+ * rotateOut animation on :enter
+ * @remarks triggerName: `rotateOutOnLeave`
  */
-export const zoomOutOnLeave = createOnLeave(
-  zoomOut,
+export const rotateOutOnLeave = createOnLeave(
+  rotateOut,
   name,
   defaults,
   getAnimatecssDefaults()
 );
 
 /**
- * zoomOut animation on :decr
- * @remarks triggerName: `zoomOutOnDecr`
+ * rotateOut animation on :decr
+ * @remarks triggerName: `rotateOutOnDecr`
  */
-export const zoomOutOnDecr = createOnDecr(
-  zoomOut,
+export const rotateOutOnDecr = createOnDecr(
+  rotateOut,
   name,
   defaults,
   getAnimatecssDefaults()

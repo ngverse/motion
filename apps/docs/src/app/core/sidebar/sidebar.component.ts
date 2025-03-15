@@ -175,6 +175,16 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('rotateInUpRight'),
         ],
       },
+      {
+        name: 'Rotating Exits',
+        children: [
+          animateCSSLink('rotateOut'),
+          animateCSSLink('rotateOutDownLeft'),
+          animateCSSLink('rotateOutDownRight'),
+          animateCSSLink('rotateOutUpLeft'),
+          animateCSSLink('rotateOutUpRight'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];

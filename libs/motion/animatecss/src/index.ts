@@ -92,3 +92,10 @@ export * from './lib/rotating_entrances/rotate-in-down-left';
 export * from './lib/rotating_entrances/rotate-in-down-right';
 export * from './lib/rotating_entrances/rotate-in-up-left';
 export * from './lib/rotating_entrances/rotate-in-up-right';
+
+/** Rotating Exits */
+export * from './lib/rotating_exits/rotate-out';
+export * from './lib/rotating_exits/rotate-out-down-left';
+export * from './lib/rotating_exits/rotate-out-down-right';
+export * from './lib/rotating_exits/rotate-out-up-left';
+export * from './lib/rotating_exits/rotate-out-up-right';
