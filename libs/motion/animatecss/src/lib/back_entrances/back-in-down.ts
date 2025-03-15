@@ -12,16 +12,9 @@ import {
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-interface backInDownMotionOptions extends MotionOptions {
-  /**
-   * The starting position of the element
-   */
-  startTranslateY: string;
-}
+type backInDownMotionOptions = MotionOptions;
 
-const defaults = createDefaults<backInDownMotionOptions>({
-  startTranslateY: '-1200px',
-});
+const defaults = createDefaults<backInDownMotionOptions>();
 
 const name = `backInDown`;
 

@@ -12,16 +12,9 @@ import {
 } from '@ngverse/motion/core';
 import { getAnimatecssDefaults } from '../common/animate-css-defaults';
 
-interface backInLeftMotionOptions extends MotionOptions {
-  /**
-   * The starting position of the element
-   */
-  startTranslateX: string;
-}
+type backInLeftMotionOptions = MotionOptions;
 
-const defaults = createDefaults<backInLeftMotionOptions>({
-  startTranslateX: '-2000px',
-});
+const defaults = createDefaults<backInLeftMotionOptions>();
 
 const name = `backInLeft`;
 
