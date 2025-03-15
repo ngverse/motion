@@ -5,6 +5,11 @@ import {
   backInRight,
   backInUp,
   bounce,
+  bounceIn,
+  bounceInDown,
+  bounceInLeft,
+  bounceInRight,
+  bounceInUp,
   bounceOut,
   bounceOutDown,
   bounceOutLeft,
@@ -185,5 +190,11 @@ export const ANIMATE_CSS_DATA: MotionGroup = {
     getAllLeaves('bouncing_exits', 'bounceOutLeft', bounceOutLeft),
     getAllLeaves('bouncing_exits', 'bounceOutRight', bounceOutRight),
     getAllLeaves('bouncing_exits', 'bounceOutUp', bounceOutUp),
+
+    getAllEnters('bouncing_entrances', 'bounceIn', bounceIn),
+    getAllEnters('bouncing_entrances', 'bounceInDown', bounceInDown),
+    getAllEnters('bouncing_entrances', 'bounceInLeft', bounceInLeft),
+    getAllEnters('bouncing_entrances', 'bounceInRight', bounceInRight),
+    getAllEnters('bouncing_entrances', 'bounceInUp', bounceInUp),
   ],
 };

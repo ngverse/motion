@@ -128,6 +128,16 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('bounceOutUp'),
         ],
       },
+      {
+        name: 'Bouncing Entrances',
+        children: [
+          animateCSSLink('bounceIn'),
+          animateCSSLink('bounceInDown'),
+          animateCSSLink('bounceInLeft'),
+          animateCSSLink('bounceInRight'),
+          animateCSSLink('bounceInUp'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];

@@ -57,3 +57,10 @@ export * from './lib/bouncing_exits/bounce-out-down';
 export * from './lib/bouncing_exits/bounce-out-left';
 export * from './lib/bouncing_exits/bounce-out-right';
 export * from './lib/bouncing_exits/bounce-out-up';
+
+/** Bouncing Entrances */
+export * from './lib/bouncing_entrances/bounce-in';
+export * from './lib/bouncing_entrances/bounce-in-down';
+export * from './lib/bouncing_entrances/bounce-in-left';
+export * from './lib/bouncing_entrances/bounce-in-right';
+export * from './lib/bouncing_entrances/bounce-in-up';
