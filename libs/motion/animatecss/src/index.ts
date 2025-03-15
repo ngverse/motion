@@ -4,7 +4,16 @@ export { getAnimatecssDefaults } from './lib/common/animate-css-defaults';
 /** Attention seekers */
 export * from './lib/attention_seekers/bounce';
 export * from './lib/attention_seekers/flash';
+export * from './lib/attention_seekers/head-shake';
+export * from './lib/attention_seekers/heart-beat';
+export * from './lib/attention_seekers/jello';
 export * from './lib/attention_seekers/pulse';
+export * from './lib/attention_seekers/rubber-band';
+export * from './lib/attention_seekers/shake-x';
+export * from './lib/attention_seekers/shake-y';
+export * from './lib/attention_seekers/swing';
+export * from './lib/attention_seekers/tada';
+export * from './lib/attention_seekers/wobble';
 
 /** Back Entrances */
 export * from './lib/back_entrances/back-in-down';

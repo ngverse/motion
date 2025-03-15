@@ -47,9 +47,18 @@ export const SIDEBAR_ROUTES = [
       {
         name: 'Attention Seekers',
         children: [
-          animateCSSLink('flash'),
           animateCSSLink('bounce'),
+          animateCSSLink('flash'),
+          animateCSSLink('headShake'),
+          animateCSSLink('heartBeat'),
+          animateCSSLink('jello'),
           animateCSSLink('pulse'),
+          animateCSSLink('rubberBand'),
+          animateCSSLink('shakeX'),
+          animateCSSLink('shakeY'),
+          animateCSSLink('swing'),
+          animateCSSLink('tada'),
+          animateCSSLink('wobble'),
         ],
       },
       {
