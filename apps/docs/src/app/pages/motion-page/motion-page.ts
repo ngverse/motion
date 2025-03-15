@@ -16,7 +16,8 @@ import { NgIcon } from '@ng-icons/core';
 import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
 import { ApiTableComponent } from '../../core/api-table/api-table.component';
 import { SourceCodeComponent } from '../../core/source-code/source-code.component';
-import { ANIMATE_DATA, MotionItem, TRIGGER_TYPES } from '../../motion-data';
+import { ANIMATE_DATA } from '../../motion-data/motion-data';
+import { MotionItem, TRIGGER_TYPES } from '../../motion-data/motion-types';
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
