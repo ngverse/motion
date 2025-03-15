@@ -79,3 +79,9 @@ export * from './lib/bouncing_entrances/bounce-in-down';
 export * from './lib/bouncing_entrances/bounce-in-left';
 export * from './lib/bouncing_entrances/bounce-in-right';
 export * from './lib/bouncing_entrances/bounce-in-up';
+
+/** Lightspeed */
+export * from './lib/lightspeed/light-speed-in-left';
+export * from './lib/lightspeed/light-speed-in-right';
+export * from './lib/lightspeed/light-speed-out-left';
+export * from './lib/lightspeed/light-speed-out-right';

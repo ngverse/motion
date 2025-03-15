@@ -30,6 +30,10 @@ import {
   hinge,
   jackInTheBox,
   jello,
+  lightSpeedInLeft,
+  lightSpeedInRight,
+  lightSpeedOutLeft,
+  lightSpeedOutRight,
   pulse,
   rollIn,
   rollOut,
@@ -206,5 +210,11 @@ export const ANIMATE_CSS_DATA: MotionGroup = {
     getAllEnters('bouncing_entrances', 'bounceInLeft', bounceInLeft),
     getAllEnters('bouncing_entrances', 'bounceInRight', bounceInRight),
     getAllEnters('bouncing_entrances', 'bounceInUp', bounceInUp),
+
+    /** Lightspeed */
+    getAllEnters('lightspeed', 'lightSpeedInLeft', lightSpeedInLeft),
+    getAllEnters('lightspeed', 'lightSpeedInRight', lightSpeedInRight),
+    getAllLeaves('lightspeed', 'lightSpeedOutLeft', lightSpeedOutLeft),
+    getAllLeaves('lightspeed', 'lightSpeedOutRight', lightSpeedOutRight),
   ],
 };

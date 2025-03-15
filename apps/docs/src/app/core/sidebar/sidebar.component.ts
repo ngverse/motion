@@ -156,6 +156,15 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('bounceInUp'),
         ],
       },
+      {
+        name: 'Light Speed',
+        children: [
+          animateCSSLink('lightSpeedInLeft'),
+          animateCSSLink('lightSpeedInRight'),
+          animateCSSLink('lightSpeedOutLeft'),
+          animateCSSLink('lightSpeedOutRight'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];
