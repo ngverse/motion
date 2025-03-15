@@ -99,3 +99,18 @@ export * from './lib/rotating_exits/rotate-out-down-left';
 export * from './lib/rotating_exits/rotate-out-down-right';
 export * from './lib/rotating_exits/rotate-out-up-left';
 export * from './lib/rotating_exits/rotate-out-up-right';
+
+/** Fading Entrances */
+export * from './lib/fading_entrances/fade-in';
+export * from './lib/fading_entrances/fade-in-bottom-left';
+export * from './lib/fading_entrances/fade-in-bottom-right';
+export * from './lib/fading_entrances/fade-in-down';
+export * from './lib/fading_entrances/fade-in-down-big';
+export * from './lib/fading_entrances/fade-in-left';
+export * from './lib/fading_entrances/fade-in-left-big';
+export * from './lib/fading_entrances/fade-in-right';
+export * from './lib/fading_entrances/fade-in-right-big';
+export * from './lib/fading_entrances/fade-in-top-left';
+export * from './lib/fading_entrances/fade-in-top-right';
+export * from './lib/fading_entrances/fade-in-up';
+export * from './lib/fading_entrances/fade-in-up-big';
