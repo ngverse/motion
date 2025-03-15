@@ -38,3 +38,15 @@ export * from './lib/zooming_exits/zoom-out-down';
 export * from './lib/zooming_exits/zoom-out-left';
 export * from './lib/zooming_exits/zoom-out-right';
 export * from './lib/zooming_exits/zoom-out-up';
+
+/** Sliding Entrances */
+export * from './lib/sliding_entrances/slide-in-down';
+export * from './lib/sliding_entrances/slide-in-left';
+export * from './lib/sliding_entrances/slide-in-right';
+export * from './lib/sliding_entrances/slide-in-up';
+
+/** Sliding Exits */
+export * from './lib/sliding_exits/slide-out-down';
+export * from './lib/sliding_exits/slide-out-left';
+export * from './lib/sliding_exits/slide-out-right';
+export * from './lib/sliding_exits/slide-out-up';

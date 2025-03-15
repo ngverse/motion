@@ -100,6 +100,24 @@ export const SIDEBAR_ROUTES = [
           animateCSSLink('zoomOutUp'),
         ],
       },
+      {
+        name: 'Sliding Entrances',
+        children: [
+          animateCSSLink('slideInDown'),
+          animateCSSLink('slideInLeft'),
+          animateCSSLink('slideInRight'),
+          animateCSSLink('slideInUp'),
+        ],
+      },
+      {
+        name: 'Sliding Exits',
+        children: [
+          animateCSSLink('slideOutDown'),
+          animateCSSLink('slideOutLeft'),
+          animateCSSLink('slideOutRight'),
+          animateCSSLink('slideOutUp'),
+        ],
+      },
     ],
   },
 ] as SidebarRoot[];

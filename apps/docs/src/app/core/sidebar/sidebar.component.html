@@ -14,7 +14,7 @@
           @for (group of route.groups; track $index) {
             <li class="pl-4">
               <ul class="list-none pl-0">
-                <li class="mb-3">{{ group.name }}</li>
+                <li class="mb-3 font-medium">{{ group.name }}</li>
                 @for (link of group.children; track $index) {
                   <li>
                     <app-sidebar-link [link]="link"></app-sidebar-link>
