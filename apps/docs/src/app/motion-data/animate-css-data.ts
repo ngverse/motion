@@ -37,6 +37,11 @@ import {
   pulse,
   rollIn,
   rollOut,
+  rotateIn,
+  rotateInDownLeft,
+  rotateInDownRight,
+  rotateInUpLeft,
+  rotateInUpRight,
   rubberBand,
   shakeX,
   shakeY,
@@ -216,5 +221,12 @@ export const ANIMATE_CSS_DATA: MotionGroup = {
     getAllEnters('lightspeed', 'lightSpeedInRight', lightSpeedInRight),
     getAllLeaves('lightspeed', 'lightSpeedOutLeft', lightSpeedOutLeft),
     getAllLeaves('lightspeed', 'lightSpeedOutRight', lightSpeedOutRight),
+
+    /** Rotating Entrances */
+    getAllEnters('rotating_entrances', 'rotateIn', rotateIn),
+    getAllEnters('rotating_entrances', 'rotateInDownLeft', rotateInDownLeft),
+    getAllEnters('rotating_entrances', 'rotateInDownRight', rotateInDownRight),
+    getAllEnters('rotating_entrances', 'rotateInUpLeft', rotateInUpLeft),
+    getAllEnters('rotating_entrances', 'rotateInUpRight', rotateInUpRight),
   ],
 };

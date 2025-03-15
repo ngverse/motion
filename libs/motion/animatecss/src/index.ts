@@ -85,3 +85,10 @@ export * from './lib/lightspeed/light-speed-in-left';
 export * from './lib/lightspeed/light-speed-in-right';
 export * from './lib/lightspeed/light-speed-out-left';
 export * from './lib/lightspeed/light-speed-out-right';
+
+/** Rotating Entrances */
+export * from './lib/rotating_entrances/rotate-in';
+export * from './lib/rotating_entrances/rotate-in-down-left';
+export * from './lib/rotating_entrances/rotate-in-down-right';
+export * from './lib/rotating_entrances/rotate-in-up-left';
+export * from './lib/rotating_entrances/rotate-in-up-right';
