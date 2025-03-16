@@ -20,7 +20,7 @@
           @if (isFirst) {
             <th
               scope="row"
-              class="whitespace-nowrap px-6 py-4 font-medium text-gray-900"
+              class="whitespace-nowrap px-1 py-1 font-medium text-gray-900 lg:px-6 lg:py-4"
             >
               {{ value }}
               @if (hasRequired(data)) {
@@ -28,7 +28,7 @@
               }
             </th>
           } @else {
-            <td class="px-6 py-4">
+            <td class="px-1 py-1 lg:px-6 lg:py-4">
               @if (isLast) {
                 <span [innerHTML]="value"></span>
               } @else {
