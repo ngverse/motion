@@ -18,7 +18,11 @@ import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
 import { ApiTableComponent } from '../../core/api-table/api-table.component';
 import { SourceCodeComponent } from '../../core/source-code/source-code.component';
 import { ANIMATE_DATA } from '../../motion-data/motion-data';
-import { MotionItem, TRIGGER_TYPES } from '../../motion-data/motion-types';
+import {
+  MotionItem,
+  MotionOption,
+  TRIGGER_TYPES,
+} from '../../motion-data/motion-types';
 function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -132,6 +136,15 @@ export class MotionPageComponent implements AfterViewInit {
     return `import { ${name} } from "@ngverse/motion"`;
   }
 
+  updateFunctionCode = computed(
+    () =>
+      `import { set${capitalize(
+        this.motion()?.name ?? ''
+      )}Defaults } from '@ngverse/motion/${this.libraryName()}' `
+  );
+
+  defaultOptions = signal<MotionOption[]>([]);
+
   ngAfterViewInit(): void {
     this._activatedRoute.paramMap.subscribe((params) => {
       const libraryName = params.get('libraryName');
@@ -149,6 +162,9 @@ export class MotionPageComponent implements AfterViewInit {
     if (library) {
       const motion = library.motions.find((m) => m.name === motionName);
       if (motion) {
+        this.defaultOptions.set(
+          motion.options?.length ? motion.options : library.defaults
+        );
         this.motion.set(motion);
         this.libraryName.set(libraryName);
         const animationFactory = this.animationBuilder.build(motion.motion());
