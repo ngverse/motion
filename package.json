@@ -11,7 +11,8 @@
     "build:docs": "npx nx run docs:build",
     "check:docs": "npm run build:docs && npx nx run docs:lint  && npm run format:check",
     "check:motion": "npm run build:motion && npx nx run motion:lint  && npm run format:check",
-    "generate-component": "npx nx generate @schematics/angular:component"
+    "generate-component": "npx nx generate @schematics/angular:component",
+    "release": "nx release --yes && git push"
   },
   "private": true,
   "lint-staged": {
