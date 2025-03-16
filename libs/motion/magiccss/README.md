@@ -1,3 +1,6 @@
-# @ngverse/motion/magiccss
+# @ngverse/motion
 
-Secondary entry point of `@ngverse/motion`. It can be used by importing from `@ngverse/motion/magiccss`.
+<p align="center">
+   <img src="https://github.com/ngverse/motion/blob/main/apps/docs/public/logo.png?raw=true" alt="Logo" width="200px" />
+</p>
+`@ngverse/motion` is an Angular animations library, see more info on [link](https://motion.ngverse.dev)
