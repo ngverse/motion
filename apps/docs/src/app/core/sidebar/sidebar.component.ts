@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgIcon } from '@ng-icons/core';
+import { matKeyboardArrowDown } from '@ng-icons/material-icons/baseline';
+import { CollapsibleDirective } from '../collapsible/collapsible.directive';
 import { SidebarLinkComponent } from './sidebar-link/sidebar-link.component';
 
 interface SidebarRoot {
@@ -245,10 +248,11 @@ export function getAllSidebarLinks() {
 
 @Component({
   selector: 'app-sidebar',
-  imports: [SidebarLinkComponent],
+  imports: [SidebarLinkComponent, NgIcon, CollapsibleDirective],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
   routes: SidebarRoot[] = SIDEBAR_ROUTES;
+  ARROW_DOWN = matKeyboardArrowDown;
 }
