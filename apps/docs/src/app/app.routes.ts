@@ -21,7 +21,13 @@ export const appRoutes: Route[] = [
           import('./pages/default-page/default-page.component').then(
             (m) => m.DefaultPageComponent
           ),
-        runGuardsAndResolvers: 'always',
+      },
+      {
+        path: 'generalcss/defaults',
+        loadComponent: () =>
+          import('./pages/default-page/default-page.component').then(
+            (m) => m.DefaultPageComponent
+          ),
       },
       {
         path: ':libraryName/:motionName',

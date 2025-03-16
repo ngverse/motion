@@ -9,7 +9,7 @@ import {
   createOnIncr,
   MotionOptions,
 } from '@ngverse/motion/core';
-import { getGeneralDefaults } from './common/general-defaults';
+import { getGeneralcssDefaults } from './common/general-defaults';
 
 interface expandMotionOptions extends MotionOptions {
   /**
@@ -41,7 +41,7 @@ export const expand = createMotionFromAnimate<expandMotionOptions>(
     }),
   ]),
   defaults,
-  getGeneralDefaults()
+  getGeneralcssDefaults()
 );
 
 /**
@@ -52,7 +52,7 @@ export const expandOnEnter = createOnEnter(
   expand,
   name,
   defaults,
-  getGeneralDefaults()
+  getGeneralcssDefaults()
 );
 
 /**
@@ -63,5 +63,5 @@ export const expandOnIncr = createOnIncr(
   expand,
   name,
   defaults,
-  getGeneralDefaults()
+  getGeneralcssDefaults()
 );

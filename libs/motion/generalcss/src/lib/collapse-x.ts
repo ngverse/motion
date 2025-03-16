@@ -9,7 +9,7 @@ import {
   createOnLeave,
   MotionOptions,
 } from '@ngverse/motion/core';
-import { getGeneralDefaults } from './common/general-defaults';
+import { getGeneralcssDefaults } from './common/general-defaults';
 
 interface collapseXMotionOptions extends MotionOptions {
   /**
@@ -44,7 +44,7 @@ export const collapseX = createMotionFromAnimate<collapseXMotionOptions>(
     }),
   ]),
   defaults,
-  getGeneralDefaults()
+  getGeneralcssDefaults()
 );
 
 /**
@@ -55,7 +55,7 @@ export const collapseXOnLeave = createOnLeave(
   collapseX,
   name,
   defaults,
-  getGeneralDefaults()
+  getGeneralcssDefaults()
 );
 
 /**
@@ -66,5 +66,5 @@ export const collapseXOnDecr = createOnDecr(
   collapseX,
   name,
   defaults,
-  getGeneralDefaults()
+  getGeneralcssDefaults()
 );
