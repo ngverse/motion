@@ -23,7 +23,12 @@ const name = `fadeInDown`;
  */
 export const fadeInDown = createMotionFromAnimate<fadeInDownMotionOptions>(
   keyframes([
-    style({ opacity: 0, transform: 'translate3d(0, -100%, 0)', offset: 0 }),
+    style({
+      visibility: 'visible',
+      opacity: 0,
+      transform: 'translate3d(0, -100%, 0)',
+      offset: 0,
+    }),
     style({ opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1 }),
   ]),
   defaults,

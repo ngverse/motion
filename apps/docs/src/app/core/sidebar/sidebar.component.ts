@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgIcon } from '@ng-icons/core';
 import { matKeyboardArrowDown } from '@ng-icons/material-icons/baseline';
+import { collapseOnLeave, expandOnEnter } from '@ngverse/motion/generalcss';
 import { CollapsibleDirective } from '../collapsible/collapsible.directive';
 import { SidebarLinkComponent } from './sidebar-link/sidebar-link.component';
 
@@ -251,6 +252,7 @@ export function getAllSidebarLinks() {
   imports: [SidebarLinkComponent, NgIcon, CollapsibleDirective],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
+  animations: [collapseOnLeave(), expandOnEnter()],
 })
 export class SidebarComponent {
   routes: SidebarRoot[] = SIDEBAR_ROUTES;
