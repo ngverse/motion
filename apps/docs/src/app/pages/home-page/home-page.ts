@@ -2,7 +2,6 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
-import { twisterInDownOnEnter } from '@ngverse/motion/magiccss';
 import { ProjectNameComponent } from '../../core/project-name/project-name.component';
 
 @Component({
@@ -10,11 +9,6 @@ import { ProjectNameComponent } from '../../core/project-name/project-name.compo
   imports: [CommonModule, ProjectNameComponent, RouterLink],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
-  animations: [
-    twisterInDownOnEnter({
-      delay: 250,
-    }),
-  ],
 })
 export class HomePageComponent {
   private _document = inject(DOCUMENT);
