@@ -1,6 +1,6 @@
-<div class="container mx-auto w-[1204px]">
+<div class="container mx-auto px-5">
   @if(motion();as motion){
-  <h1 class="mb-3 text-7xl">{{motion.name}}</h1>
+  <h1 class="mb-3 text-5xl lg:text-7xl">{{motion.name}}</h1>
   @if(motion.href){
   <a
     target="_blank"
@@ -41,19 +41,23 @@
   <h2 class="mt-8 border-b border-b-slate-300 pb-2 text-3xl">Triggers</h2>
   @for (trigger of triggers; track $index) {
   <div class="my-6">
-    <p class="mb-2 text-xl">
+    <div
+      class="mb-2 flex flex-col flex-wrap gap-2 text-xl lg:flex-row lg:items-center"
+    >
       {{triggerImportName(trigger)}}
-      <span
-        class="rounded-xl border border-slate-400 px-3 text-base text-slate-700"
-      >
-        {{triggerAnimateType(trigger)}}</span
-      >
-      <span
-        class="ml-1 rounded-xl border border-slate-400 px-3 text-base text-slate-700"
-      >
-        {{triggerUsageName(trigger)}}</span
-      >
-    </p>
+      <div class="flex items-center">
+        <span
+          class="rounded-xl border border-slate-400 px-3 text-base text-slate-700"
+        >
+          {{triggerAnimateType(trigger)}}</span
+        >
+        <span
+          class="ml-1 rounded-xl border border-slate-400 px-3 text-base text-slate-700"
+        >
+          {{triggerUsageName(trigger)}}</span
+        >
+      </div>
+    </div>
     <app-source-code [code]="triggerImportCode(trigger)"></app-source-code>
   </div>
   } } }

@@ -30,17 +30,14 @@ export const expand = createMotionFromAnimate<expandMotionOptions>(
   keyframes([
     style({
       height: '{{startHeight}}',
-      visibility: 'hidden',
-      overflow: 'hidden',
-      easing: 'ease-out',
       offset: 0,
+      overflow: 'hidden',
     }),
     style({
       height: AUTO_STYLE,
       visibility: AUTO_STYLE,
-      overflow: 'hidden',
-      easing: 'ease-out',
       offset: 1,
+      overflow: 'hidden',
     }),
   ]),
   defaults,

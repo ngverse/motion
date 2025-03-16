@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 
 import { Platform } from '@angular/cdk/platform';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
 import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
@@ -37,6 +38,8 @@ export class MotionPageComponent implements AfterViewInit {
   REPLAY_ICON = matReplay;
   EXTERNAL_LINK = matOpenInNew;
   private _document = inject(DOCUMENT);
+  title = inject(Title);
+  meta = inject(Meta);
 
   private _activatedRoute = inject(ActivatedRoute);
 
@@ -74,6 +77,32 @@ export class MotionPageComponent implements AfterViewInit {
     return triggers;
   });
 
+  updateMeta(motionName: string, libraryName: string) {
+    const title = `${motionName} ${libraryName} | @ngverse/motion`;
+    const description = `${motionName} animation from ${libraryName} library in @ngverse/motion`;
+    this.title.setTitle(title);
+    if (motionName) {
+      this.meta.updateTag({
+        name: 'description',
+        content: description,
+      });
+    }
+    this.meta.addTags([
+      { property: 'og:title', content: title },
+      {
+        property: 'og:description',
+        content: description,
+      },
+      {
+        property: 'og:image',
+        content: 'https://motion.ngverse.dev/logo.png',
+      },
+      { property: 'og:image:alt', content: '@ngverse/motion logo' },
+      { property: 'og:url', content: this._document.location.href },
+      { property: 'og:type', content: 'website' },
+    ]);
+  }
+
   triggerImportCode(type: TRIGGER_TYPES) {
     return `import { ${this.triggerImportName(
       type
@@ -110,6 +139,7 @@ export class MotionPageComponent implements AfterViewInit {
       const playable = this.playable()?.nativeElement;
       if (libraryName && motionName && playable) {
         this.fillMotion(libraryName, motionName, playable);
+        this.updateMeta(motionName, libraryName);
       }
     });
   }
@@ -120,6 +150,7 @@ export class MotionPageComponent implements AfterViewInit {
       const motion = library.motions.find((m) => m.name === motionName);
       if (motion) {
         this.motion.set(motion);
+        this.libraryName.set(libraryName);
         const animationFactory = this.animationBuilder.build(motion.motion());
         // this.animationPlaher?.destroy();
         this.animationPlaher = animationFactory?.create(playable);
