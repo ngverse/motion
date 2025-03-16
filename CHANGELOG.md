@@ -1,3 +1,20 @@
+## 0.3.0 (2025-03-16)
+
+### 🚀 Features
+
+- slide_entrances, slide_exits ([#14](https://github.com/ngverse/animate/pull/14))
+- bouncing_exits, bouncing_entrances ([#15](https://github.com/ngverse/animate/pull/15))
+- add attention_seekers ([#16](https://github.com/ngverse/animate/pull/16))
+- implement back_exits ([#17](https://github.com/ngverse/animate/pull/17))
+- imeplement lightspeed ([#18](https://github.com/ngverse/animate/pull/18))
+- rotating_entrances, rotating_exits ([#19](https://github.com/ngverse/animate/pull/19))
+- imeplement fading_entrances ([#20](https://github.com/ngverse/animate/pull/20))
+- fade exits ([#21](https://github.com/ngverse/animate/pull/21))
+
+### ❤️ Thank You
+
+- lukonik @lukonik
+
 ## 0.2.0 (2025-03-14)
 
 ### 🚀 Features
