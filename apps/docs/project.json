@@ -24,9 +24,7 @@
         "styles": ["apps/docs/src/styles.css"],
         "scripts": [],
         "server": "apps/docs/src/main.server.ts",
-        "ssr": {
-          "entry": "apps/docs/src/server.ts"
-        },
+        "ssr": false,
         "prerender": true
       },
       "configurations": {
