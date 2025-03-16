@@ -1,0 +1,9 @@
+<h1 class="mb-4 text-7xl">{{ title() }}</h1>
+<p [innerHTML]="description()"></p>
+<app-api-table
+  label="Default Options"
+  [data]="defaults()"
+  [headers]="['Name', 'Type', 'Default', 'Description']"
+></app-api-table>
+<h4 class="mb-4 mt-6 text-3xl capitalize">Update function</h4>
+<app-source-code [code]="setDefaultCode()"></app-source-code>

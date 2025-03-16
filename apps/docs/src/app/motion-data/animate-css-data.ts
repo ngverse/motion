@@ -100,6 +100,7 @@ import {
 } from '@ngverse/motion/animatecss';
 
 import {
+  createDefaultOptionsDoc,
   MotionGroup,
   MotionItem,
   MotionOption,
@@ -167,6 +168,11 @@ function getAllLeaves(
 
 export const ANIMATE_CSS_DATA: MotionGroup = {
   name: 'animatecss',
+  title: 'Animate CSS',
+  description:
+    'Animations are implemented using the <a class="underline" href="https://animate.style/" target="_blank">Animate.css</a> library',
+  defaults: createDefaultOptionsDoc('1000', '0', 'ease-in-out'),
+  setDefault: 'setAnimatecssDefaults',
   motions: [
     /** Attention Seekers */
     getAllStates('attention_seekers', 'bounce', bounce),

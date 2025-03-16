@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Params, RouterLink, RouterLinkActive } from '@angular/router';
 import { SidebarLink } from '../sidebar.component';
 
 @Component({
@@ -10,4 +10,5 @@ import { SidebarLink } from '../sidebar.component';
 })
 export class SidebarLinkComponent {
   link = input.required<SidebarLink>();
+  queryParams = input<Params | null | undefined>();
 }
