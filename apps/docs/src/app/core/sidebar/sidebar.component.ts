@@ -10,6 +10,7 @@ interface SidebarRoot {
   groups: SidebarGroup[];
   children?: SidebarLink[];
   default?: string;
+  status?: string;
 }
 
 interface SidebarGroup {
@@ -234,6 +235,10 @@ export const SIDEBAR_ROUTES = [
         ],
       },
     ],
+  },
+  {
+    name: 'Magic CSS',
+    status: 'in_progress',
   },
 ] as SidebarRoot[];
 
