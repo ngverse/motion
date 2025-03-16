@@ -150,6 +150,7 @@ export class MotionPageComponent implements AfterViewInit {
       const motion = library.motions.find((m) => m.name === motionName);
       if (motion) {
         this.motion.set(motion);
+        this.libraryName.set(libraryName);
         const animationFactory = this.animationBuilder.build(motion.motion());
         // this.animationPlaher?.destroy();
         this.animationPlaher = animationFactory?.create(playable);

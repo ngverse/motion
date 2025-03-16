@@ -6,7 +6,7 @@
     <button
       [cdkCopyToClipboard]="code()"
       (click)="copy()"
-      class="absolute right-1 top-2 cursor-pointer text-slate-500"
+      class="absolute right-1 top-2 hidden cursor-pointer text-slate-500 lg:block"
     >
       @if (copied()) {
         <svg
