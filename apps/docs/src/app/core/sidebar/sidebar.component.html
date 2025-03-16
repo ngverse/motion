@@ -19,6 +19,14 @@
 
           @if (!collapsible.expanded()) {
             <ul @collapseOnLeave @expandOnEnter>
+              @if (route.default) {
+                <app-sidebar-link
+                  [link]="{
+                    name: 'Defaults',
+                    url: ['/doc', route.default, 'defaults'],
+                  }"
+                ></app-sidebar-link>
+              }
               @if (route.children) {
                 @for (link of route.children; track $index) {
                   <li>

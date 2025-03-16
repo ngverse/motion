@@ -2,6 +2,7 @@
 
 <a
   [routerLinkActive]="'selected'"
+  [queryParams]="queryParams()"
   class="sidebar-link my-3 ml-0 flex h-8 cursor-pointer items-center justify-between rounded-md pl-4 pr-2 hover:bg-slate-100 hover:font-medium"
   [routerLink]="_link.url"
   >{{ _link.name }}

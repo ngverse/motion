@@ -1,0 +1,78 @@
+<article class="prose prose-xl prose-h2:my-4 prose-p:mb-4 max-w-none">
+  <h1>&#64;ngverse/motion</h1>
+  <h2>Introduction</h2>
+  <p>
+    <app-project-name [code]="true"></app-project-name> is an Angular animation
+    library that implements animations from popular CSS animation libraries in
+    an Angular way using <code>&#64;angular/animations</code> . It is
+    customizable and includes relevant triggers for animations.
+  </p>
+  <h2>Installation</h2>
+  <p>Install the following package:</p>
+  <app-source-code
+    language="bash"
+    code="npm install @ngverse/motion --save"
+  ></app-source-code>
+  <h2>Usage</h2>
+  <p>
+    In order to use animation import the proper animation and attach it to any
+    trigger you want for example:
+  </p>
+  <app-source-code language="ts" [code]="exampleUsage"></app-source-code>
+  <p>
+    This will animate the element with <code>fadeIn</code> on
+    <code>:enter</code>
+  </p>
+  <p>
+    Animations are grouped by the library they originate from, so you should
+    import them using their specific import path.
+  </p>
+  <p>
+    In this case you are importing <code>fadeIn</code> from
+    <code>&#64;ngverse/motion/animatecss</code>
+  </p>
+  <h3>Triggers</h3>
+  <p>
+    Many times, we use animations with triggers like <code>:enter</code>,
+    <code>:leave</code>, etc. Therefore, all animations come with predefined
+    triggers that you can use in your component. There are four predefined
+    triggers:
+  </p>
+  <ul>
+    <li>:enter</li>
+    <li>:leave</li>
+    <li>:incr</li>
+    <li>:decr</li>
+  </ul>
+  <p>
+    Depending on the animation version, it may include all four triggers or only
+    entry triggers like <code>:enter</code> and <code>:incr</code>, or exit
+    triggers like <code>:leave</code> and <code>:decr</code>.
+  </p>
+  <p>So we can write the previous example like this:</p>
+  <app-source-code language="ts" [code]="enterExampleUsage"></app-source-code>
+  <h2>Configuration</h2>
+  <p>There are multiple levels of configuration:</p>
+  <ul>
+    <li>library configuration</li>
+    <li>animation type configuration</li>
+    <li>animation configuration</li>
+  </ul>
+  <h3>Library configuration</h3>
+  <p>
+    You can set global configuration for a whole library. For example in order
+    to set configuration for `animatecss` you can use `setAnimateCssDefaults`
+    methods
+  </p>
+  <h3>Animation type configuration</h3>
+  <p>
+    you can also set configuration per animation type. For example if you want
+    that all your <code>fadeIn</code>
+    animation duration to be 3000ms you can use `setFadeInDefaults`
+  </p>
+  <h3>Animation configuration</h3>
+  <p>
+    You can also set configuration per animation. This is pretty straitforward,
+    as you just pass different params to the animation
+  </p>
+</article>

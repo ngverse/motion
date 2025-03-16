@@ -9,6 +9,21 @@ export const appRoutes: Route[] = [
       ),
     children: [
       {
+        path: 'get-started',
+        loadComponent: () =>
+          import('./pages/get-started-page/get-started-page.component').then(
+            (g) => g.GetStartedPageComponent
+          ),
+      },
+      {
+        path: 'animatecss/defaults',
+        loadComponent: () =>
+          import('./pages/default-page/default-page.component').then(
+            (m) => m.DefaultPageComponent
+          ),
+        runGuardsAndResolvers: 'always',
+      },
+      {
         path: ':libraryName/:motionName',
         loadComponent: () =>
           import('./pages/motion-page/motion-page').then(
@@ -18,7 +33,7 @@ export const appRoutes: Route[] = [
       },
       {
         path: '',
-        redirectTo: 'animatecss/flash',
+        redirectTo: 'get-started',
         pathMatch: 'full',
       },
     ],

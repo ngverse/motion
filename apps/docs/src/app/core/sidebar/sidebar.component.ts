@@ -9,6 +9,7 @@ interface SidebarRoot {
   name: string;
   groups: SidebarGroup[];
   children?: SidebarLink[];
+  default?: string;
 }
 
 interface SidebarGroup {
@@ -18,17 +19,17 @@ interface SidebarGroup {
 
 export interface SidebarLink {
   name: string;
-  url: string;
+  url: string | string[];
   mode?: 'experimental';
 }
 
 export const SIDEBAR_ROUTES = [
   {
-    name: 'Getting Started',
+    name: 'Documentation',
     children: [
       {
-        name: 'Introduction',
-        url: '/doc/introduction',
+        name: 'Get Started',
+        url: '/doc/get-started',
       },
       {
         name: 'Installation',
@@ -47,6 +48,7 @@ export const SIDEBAR_ROUTES = [
   },
   {
     name: 'Animate CSS',
+    default: 'animatecss',
     groups: [
       {
         name: 'Attention Seekers',

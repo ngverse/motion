@@ -10,6 +10,10 @@ import { MotionData, TRIGGER_TYPES } from './motion-types';
 export const ANIMATE_DATA: MotionData = [
   {
     name: 'generalcss',
+    defaults: [],
+    setDefault: '',
+    description: '',
+    title: '',
     motions: [
       {
         name: 'expand',
