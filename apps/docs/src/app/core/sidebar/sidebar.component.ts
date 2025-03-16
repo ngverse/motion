@@ -32,10 +32,6 @@ export const SIDEBAR_ROUTES = [
         name: 'Get Started',
         url: '/doc/get-started',
       },
-      {
-        name: 'Installation',
-        url: '/doc/installation',
-      },
     ],
   },
   {
