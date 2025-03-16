@@ -7,11 +7,11 @@ let MOTION_DEFAULTS: Required<MotionDefaultOptions> = {
   easing: 'ease-in-out',
 };
 
-export function getGeneralDefaults() {
+export function getGeneralcssDefaults() {
   return MOTION_DEFAULTS;
 }
 
-export function setGeneralDefaults(options: MotionOptions) {
+export function setGeneralcssDefaults(options: MotionOptions) {
   const defaults = { ...MOTION_DEFAULTS, ...options };
 
   MOTION_DEFAULTS = defaults;

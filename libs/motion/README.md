@@ -1,7 +1,6 @@
-# motion
+# @ngverse/motion
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test motion` to execute the unit tests.
+<p align="center">
+   <img src="https://github.com/ngverse/motion/blob/main/apps/docs/public/logo.png?raw=true" alt="Logo" width="200px" />
+</p>
+`@ngverse/motion` is an Angular animations library, see more info on [link](https://motion.ngverse.dev)

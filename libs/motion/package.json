@@ -4,8 +4,20 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngverse/motion"
+  },
   "peerDependencies": {
     "@angular/animations": ">=17.0.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "angular",
+    "angular-components",
+    "typescript",
+    "components",
+    "angular-animations",
+    "javascript"
+  ]
 }

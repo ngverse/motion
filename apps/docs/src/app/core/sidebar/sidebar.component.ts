@@ -3,6 +3,7 @@ import { NgIcon } from '@ng-icons/core';
 import { matKeyboardArrowDown } from '@ng-icons/material-icons/baseline';
 import { collapseOnLeave, expandOnEnter } from '@ngverse/motion/generalcss';
 import { CollapsibleDirective } from '../collapsible/collapsible.directive';
+import { SortPipe } from '../pipes/sort.pipe';
 import { SidebarLinkComponent } from './sidebar-link/sidebar-link.component';
 
 interface SidebarRoot {
@@ -10,6 +11,7 @@ interface SidebarRoot {
   groups: SidebarGroup[];
   children?: SidebarLink[];
   default?: string;
+  status?: string;
 }
 
 interface SidebarGroup {
@@ -31,21 +33,9 @@ export const SIDEBAR_ROUTES = [
         name: 'Get Started',
         url: '/doc/get-started',
       },
-      {
-        name: 'Installation',
-        url: '/doc/installation',
-      },
     ],
   },
-  {
-    name: 'General CSS',
-    children: [
-      generalLink('expand'),
-      generalLink('expand-x'),
-      generalLink('collapse'),
-      generalLink('collapse-x'),
-    ],
-  },
+
   {
     name: 'Animate CSS',
     default: 'animatecss',
@@ -229,6 +219,25 @@ export const SIDEBAR_ROUTES = [
       },
     ],
   },
+  {
+    name: 'General CSS',
+    default: 'generalcss',
+    groups: [
+      {
+        name: 'Animations',
+        children: [
+          generalLink('expand'),
+          generalLink('expand-x'),
+          generalLink('collapse'),
+          generalLink('collapse-x'),
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Magic CSS',
+    status: 'in_progress',
+  },
 ] as SidebarRoot[];
 
 function animateCSSLink(name: string) {
@@ -251,7 +260,7 @@ export function getAllSidebarLinks() {
 
 @Component({
   selector: 'app-sidebar',
-  imports: [SidebarLinkComponent, NgIcon, CollapsibleDirective],
+  imports: [SidebarLinkComponent, NgIcon, CollapsibleDirective, SortPipe],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
   animations: [collapseOnLeave(), expandOnEnter()],
