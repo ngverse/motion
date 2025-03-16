@@ -36,18 +36,21 @@
                 ></app-sidebar-link>
               }
               @if (route.children) {
-                @for (link of route.children; track $index) {
+                @for (link of route.children | appSort: 'name'; track $index) {
                   <li>
                     <app-sidebar-link [link]="link"></app-sidebar-link>
                   </li>
                 }
               }
               @if (route.groups) {
-                @for (group of route.groups; track $index) {
+                @for (group of route.groups | appSort: 'name'; track $index) {
                   <li class="pl-4">
                     <ul class="list-none pl-0">
                       <li class="mb-3 mt-4 font-medium">{{ group.name }}</li>
-                      @for (link of group.children; track $index) {
+                      @for (
+                        link of group.children | appSort: 'name';
+                        track $index
+                      ) {
                         <li>
                           <app-sidebar-link [link]="link"></app-sidebar-link>
                         </li>
