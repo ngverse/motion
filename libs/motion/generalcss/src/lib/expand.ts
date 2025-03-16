@@ -32,6 +32,7 @@ export const expand = createMotionFromAnimate<expandMotionOptions>(
       height: '{{startHeight}}',
       offset: 0,
       overflow: 'hidden',
+      visibility: 'hidden',
     }),
     style({
       height: AUTO_STYLE,

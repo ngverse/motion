@@ -9,22 +9,23 @@
     >Reference <ng-icon [svg]="EXTERNAL_LINK"></ng-icon>
   </a>
   } }
-  <div
-    class="my-6 flex w-full flex-col items-center justify-center gap-4 rounded-md border border-slate-300 p-4"
-  >
-    <button
-      title="Replay animation"
-      class="bg-primary text-on-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-pink-500"
-      aria-label="Replay animation"
-      (click)="play()"
-    >
-      <ng-icon size="24" [svg]="REPLAY_ICON"></ng-icon>
-    </button>
+  <div class="my-6 w-full rounded-md border border-slate-300 p-4">
+    <div class="mb-4 flex justify-center">
+      <button
+        title="Replay animation"
+        class="bg-primary text-on-primary flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-pink-500"
+        aria-label="Replay animation"
+        (click)="play()"
+      >
+        <ng-icon size="24" [svg]="REPLAY_ICON"></ng-icon>
+      </button>
+    </div>
+
     <div
       #playable
-      class="border-primary flex h-[150px] w-[250px] flex-col items-center justify-center rounded-full border bg-pink-100"
+      class="border-primary text-primary h-[86px] w-full border bg-pink-100 text-center text-3xl font-medium leading-[86px]"
     >
-      <span class="mb-2 text-7xl">😊 </span>
+      <app-project-name></app-project-name>
     </div>
   </div>
   @if(motion();as motion){

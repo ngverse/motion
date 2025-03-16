@@ -12,10 +12,11 @@ import {
 
 import { Platform } from '@angular/cdk/platform';
 import { Meta, Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
 import { matOpenInNew, matReplay } from '@ng-icons/material-icons/baseline';
 import { ApiTableComponent } from '../../core/api-table/api-table.component';
+import { ProjectNameComponent } from '../../core/project-name/project-name.component';
 import { SourceCodeComponent } from '../../core/source-code/source-code.component';
 import { ANIMATE_DATA } from '../../motion-data/motion-data';
 import {
@@ -29,7 +30,13 @@ function capitalize(str: string) {
 
 @Component({
   selector: 'app-motion-page',
-  imports: [CommonModule, SourceCodeComponent, NgIcon, ApiTableComponent],
+  imports: [
+    CommonModule,
+    SourceCodeComponent,
+    NgIcon,
+    ApiTableComponent,
+    ProjectNameComponent,
+  ],
   templateUrl: './motion-page.html',
   styleUrl: './motion-page.css',
 })
@@ -50,6 +57,7 @@ export class MotionPageComponent implements AfterViewInit {
   libraryName = signal<string>('');
 
   platform = inject(Platform);
+  router = inject(Router);
 
   triggers = computed(() => {
     const triggers = this.motion()?.triggers;
@@ -172,7 +180,9 @@ export class MotionPageComponent implements AfterViewInit {
         this.animationPlaher = animationFactory?.create(playable);
         try {
           this.animationPlaher?.onDone(() => {
-            this.animationPlaher?.reset();
+            setTimeout(() => {
+              this.animationPlaher?.reset();
+            }, 200);
           });
           // eslint-disable-next-line no-empty
         } catch {}
