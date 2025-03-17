@@ -30,7 +30,9 @@
         "scripts": [],
         "server": "apps/docs/src/main.server.ts",
         "ssr": false,
-        "prerender": true
+        "prerender": {
+          "routesFile": "apps/docs/src/routes.txt"
+        }
       },
       "configurations": {
         "production": {
