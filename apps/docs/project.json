@@ -19,6 +19,11 @@
           {
             "glob": "**/*",
             "input": "apps/docs/public"
+          },
+          {
+            "glob": "_redirects",
+            "input": "apps/docs/src",
+            "output": "/"
           }
         ],
         "styles": ["apps/docs/src/styles.css"],
