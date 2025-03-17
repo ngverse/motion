@@ -235,9 +235,21 @@ export const SIDEBAR_ROUTES = [
   },
   {
     name: 'Magic CSS',
-    status: 'in_progress',
+    groups: [
+      {
+        name: 'Magic Effects',
+        children: [magicCSSLink('twisterInDown')],
+      },
+    ],
   },
 ] as SidebarRoot[];
+
+function magicCSSLink(name: string) {
+  return {
+    name: name,
+    url: `/doc/magiccss/${name}`,
+  };
+}
 
 function animateCSSLink(name: string) {
   return {
