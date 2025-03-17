@@ -24,13 +24,16 @@
             "glob": "_redirects",
             "input": "apps/docs/src",
             "output": "/"
-          }
+          },
+          "apps/docs/src/sitemap.xml"
         ],
         "styles": ["apps/docs/src/styles.css"],
         "scripts": [],
         "server": "apps/docs/src/main.server.ts",
         "ssr": false,
-        "prerender": true
+        "prerender": {
+          "routesFile": "apps/docs/src/routes.txt"
+        }
       },
       "configurations": {
         "production": {
