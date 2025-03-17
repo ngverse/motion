@@ -24,7 +24,8 @@
             "glob": "_redirects",
             "input": "apps/docs/src",
             "output": "/"
-          }
+          },
+          "apps/docs/src/sitemap.xml"
         ],
         "styles": ["apps/docs/src/styles.css"],
         "scripts": [],
