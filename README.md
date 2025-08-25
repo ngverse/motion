@@ -6,4 +6,4 @@
 
 [![npm](https://img.shields.io/npm/v/@ngverse/motion?label=npm&logo=npm)](https://www.npmjs.com/package/@ngverse/motion)
 
-`@ngverse/motion` is an Angular animations library, see more info on [link](https://motion.ngverse.dev)
+`@ngverse/motion` is an Angular animations library, see more info on [link](https://motion-eosin.vercel.app)
