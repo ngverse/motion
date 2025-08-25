@@ -33,7 +33,7 @@ export class HomePageComponent {
       },
       {
         property: 'og:image',
-        content: 'https://motion.ngverse.dev/logo.png',
+        content: 'https://motion-eosin.vercel.app/logo.png',
       },
       { property: 'og:image:alt', content: '@ngverse/motion logo' },
       { property: 'og:url', content: this._document.location.href },
